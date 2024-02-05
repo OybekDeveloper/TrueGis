@@ -6,4 +6,14 @@
     font-weight: bold;
     color: transparent;
   }
+  .span1 {
+    background: var(
+      --Gradient,
+      linear-gradient(180deg, #cbdcff 0%, #a2c1ff 0.01%, #184399 100%)
+    );
+    -webkit-background-clip: text; /* For Safari/Chrome/iOS */
+    background-clip: text;
+    font-weight: bold;
+    color: transparent;
+  }
 }

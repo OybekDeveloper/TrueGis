@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className='navbar w-10/12 mx-auto max-w-[1440px] h-[88px] flex justify-between items-center'>
-      <a href="/">
+      <a href="#home">
         <div className="logo flex justify-center items-center gap-[12px]">
           <img className='nav-img w-[40px] h-[40px]' src={truegis} alt="truegis" />
           <h1>TrueGis</h1>
