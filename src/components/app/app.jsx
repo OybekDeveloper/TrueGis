@@ -18,7 +18,7 @@ const App = () => {
             </div>
             <Clients />
             <Features />
-            <div className="pt-[100px]">
+            <div id='comments' className="pt-[88px]">
                 <Comments />
             </div>
             <Faq />

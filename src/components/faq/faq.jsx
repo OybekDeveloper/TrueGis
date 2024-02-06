@@ -9,7 +9,7 @@ const data = [
 ];
 const Faq = () => {
     return (
-        <div className="faq w-10/12 mx-auto pt-[100px] flex mb-[100px]">
+        <div id="faq" className="faq w-10/12 mx-auto pt-[100px] flex mb-[100px]">
             <article className="w-1/2 flex flex-col items-start gap-[16px]">
                 <h1 className="text-[32px] font-[600]">Ko’p beriladigan savollar</h1>
                 <p className="text-[16px] font-[400] opacity-[0.7] w-[60%]">

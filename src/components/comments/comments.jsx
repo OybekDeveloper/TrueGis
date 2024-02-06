@@ -3,7 +3,7 @@ import "./comments.scss";
 import { carditem } from "./comment-img";
 const Comments = () => {
     return (
-        <div id="comments" className="comments w-full mx-auto">
+        <div  className="comments w-full mx-auto">
             <h1 className="text-[32px] font-[600] text-center w-[40%] mx-auto pt-[50px]">Xizmatlarimizdan mamnun mijozlar fikrlari</h1>
             <div className="card-container w-full overflow-x-scroll whitespace-nowrap pt-[64px] pb-[180px]">
                 <div className="card-wrapper inline-flex mx-[16px]">
