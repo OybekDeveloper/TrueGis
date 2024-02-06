@@ -1,0 +1,30 @@
+.faq {
+  .faqbtn {
+    .faqbtn__img {
+      transition: transform 0.3s ease-in-out;
+      transform: rotate(0);
+    }
+    .faqbtn__img {
+      transition: all 0.3s ease-in-out;
+    }
+    .faqbtn__img.active {
+      transform: rotate(45deg) !important;
+    }
+    .transition-height {
+      transition: max-height 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+    }
+
+    .faqbtn__content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    .faqbtn__content.active {
+      max-height: 1000px; /* Set a large enough value */
+      opacity: 0.7;
+      transition: max-height 0.5s ease-in-out;
+    }
+  }
+}
