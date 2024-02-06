@@ -3,6 +3,7 @@ import Navbar from '../navbar/navbar'
 import './app.scss'
 import Home from '../home/home'
 import Clients from '../clients/clients'
+import Features from '../features/features'
 const App = () => {
     return (
         <div className='app relative '>
@@ -13,6 +14,7 @@ const App = () => {
                 <Home />
             </div>
             <Clients />
+            <Features />
         </div>
     )
 }
