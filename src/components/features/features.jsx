@@ -4,7 +4,7 @@ import { featureicon, howwe, icon, phone1, phone2, phone3 } from "./features-img
 
 const Features = () => {
     return (
-        <div id="bot_features" className="features w-10/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px]">
+        <div id="bot_features" className="features max-w-[1440px] w-10/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px]">
             <h1 className="w-[40%] text-[32px] font-[600] text-center">Biznesingizni rivojlantirish uchun
                 botimiz xizmatlari</h1>
             <section className="pt-[100px] mb-[100px] flex flex-col gap-[120px] items-center justify-center">

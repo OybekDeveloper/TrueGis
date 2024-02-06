@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { truegis } from '../imgs';
 import './navbar.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('');
-
+  const navigate = useNavigate()
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
@@ -12,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className='navbar w-10/12 mx-auto max-w-[1440px] h-[88px] flex justify-between items-center'>
       <a href="#home">
-        <div className="logo flex justify-center items-center gap-[12px]">
+        <div onClick={() => navigate("/")} className="logo flex justify-center items-center gap-[12px]">
           <img className='nav-img w-[40px] h-[40px]' src={truegis} alt="truegis" />
           <h1>TrueGis</h1>
         </div>
@@ -31,7 +32,7 @@ const Navbar = () => {
           <a href="#faq" onClick={() => handleLinkClick('faq')}>Ko’p beriladigan savollar</a>
         </li>
       </ul>
-      <button className='msg-btn'>
+      <button onClick={() => navigate('/contact')} className='msg-btn'>
         Xabar qoldirish
       </button>
     </nav>

@@ -77,17 +77,39 @@ const cards = [
 ]
 const Clients = () => {
     return (
-        <div id='clients' className='clients w-full mx-auto pt-[100px] flex flex-col items-center mb-[100px]'>
+        <div id='clients' className='clients max-w-[1440px]  mx-auto pt-[100px] flex flex-col items-center mb-[100px] overflow-hidden'>
             <h1 className='text-[32px] font-[600]'>Bizning mijozlarimiz</h1>
-            <div className='pt-[64px]  overflow-x-scroll carusel whitespace-nowrap w-full'>
-                {clients.map(item => (
-                    <div key={item.id} className='inline-flex gap-[12px] w-[300px]'>
-                        <div className='flex flex-row justify-center items-center gap-[12px]'>
-                            <img className='w-[40px] h-[40px]' src={item.url} alt={item.title} />
-                            <h1 className='text-[23px] font-[500]'>{item.title}</h1>
+            <div className='cards pt-[64px]'>
+                <div className="card-slide">
+                    {clients.map(item => (
+                        <div key={item.id} className='inline-flex pl-[112px]'>
+                            <div className='flex flex-row justify-center items-center gap-[12px]'>
+                                <img className='w-[40px] h-[40px]' src={item.url} alt={item.title} />
+                                <h1 className='text-[23px] font-[500]'>{item.title}</h1>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <div className="card-slide">
+                    {clients.map(item => (
+                        <div key={item.id} className='inline-flex pl-[112px]'>
+                            <div className='flex flex-row justify-center items-center gap-[12px]'>
+                                <img className='w-[40px] h-[40px]' src={item.url} alt={item.title} />
+                                <h1 className='text-[23px] font-[500]'>{item.title}</h1>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="card-slide">
+                    {clients.map(item => (
+                        <div key={item.id} className='inline-flex pl-[112px]'>
+                            <div className='flex flex-row justify-center items-center gap-[12px]'>
+                                <img className='w-[40px] h-[40px]' src={item.url} alt={item.title} />
+                                <h1 className='text-[23px] font-[500]'>{item.title}</h1>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
             <article className='relative flex flex-col items-center mt-[200px] gap-[64px]'>
                 <div className='absolute top-10 left-20 z-[-1]'>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { homeimg, homebackimg, homebackimg1 } from '../imgs';
+import { homeimg, homebackimg, } from '../imgs';
 import './home.scss'
 const Home = () => {
     return (

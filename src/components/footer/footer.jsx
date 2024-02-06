@@ -9,13 +9,7 @@ const Footer = () => {
     };
 
     return (
-        <div className="footer w-10/12 mx-auto pt-[100px] mb-[48px]">
-            <article className="w-full flex flex-col gap-[64px] justify-center items-center  pb-[100px]">
-                <h1 className="text-[32px] font-[600]">
-                    Biz bilan ishlashga tayyormisiz?
-                </h1>
-                <button className="msg-btn">Xabar qoldirish</button>
-            </article>
+        <div className="footer w-10/12 mx-auto pt-[100px] mb-[48px] max-w-[1440px]">
             <footer>
                 <div className="flex justify-between items-start pb-[40px]">
                     <div className="flex justify-start items-center gap-[12px]">
