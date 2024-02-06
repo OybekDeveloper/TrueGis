@@ -1,10 +1,10 @@
 import React from "react";
 import "./features.scss";
-import { featureicon, icon, phone1, phone2, phone3 } from "./features-img";
+import { featureicon, howwe, icon, phone1, phone2, phone3 } from "./features-img";
 
 const Features = () => {
     return (
-        <div className="features w-10/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px]">
+        <div id="bot_features" className="features w-10/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px]">
             <h1 className="w-[40%] text-[32px] font-[600] text-center">Biznesingizni rivojlantirish uchun
                 botimiz xizmatlari</h1>
             <section className="pt-[100px] mb-[100px] flex flex-col gap-[120px] items-center justify-center">
@@ -59,7 +59,7 @@ const Features = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full flex flex-row justify-center feature-card-true p-[48px] pt-[100px]">
+            <section className="w-full flex flex-row justify-center feature-card-true p-[48px] pt-[100px] mb-[100px]">
                 <div className="img-container flex justify-center items-center relative w-1/2">
                     <img className="w-[240px] h-[240px]" src={icon} alt="icon" />
                 </div>
@@ -69,6 +69,38 @@ const Features = () => {
                     <button className='msg-btn mt-[32px]'>
                         Xabar qoldirish
                     </button>
+                </article>
+            </section>
+            <section className="w-full flex flex-col justify-center items-center pt-[100px]">
+                <h1 className="text-[32px] font-[600]">Biz qanday ishlaymiz?</h1>
+                <article className=" w-[60%] flex flex-col  justify-center items-center gap-[10px] pt-[74px] mb-[50px]">
+                    <div className="flex gap-[31px] justify-end  w-full">
+                        <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
+                            <p className="top-0 right-[-30px] absolute w-1/2">Mijozlar bilan dastlabki uchrashuv va kelishuv shartlari haqida batafsil muloqot</p>
+                            <img className="w-[16px] h-[16px]" src={howwe} alt="" />
+                            <div className="howwe-line"></div>
+                        </div>
+                    </div>
+                    <div className="flex gap-[31px] justify-end  w-full">
+                        <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
+                            <p className="top-0 left-[-30px] text-right absolute w-1/2">Kelishuvga binoan dasturiy mahsulotni ishlab chiqish va bot xizmatlariga qo’shish</p>
+                            <img className="w-[16px] h-[16px]" src={howwe} alt="" />
+                            <div className="howwe-line"></div>
+                        </div>
+                    </div>
+                    <div className="flex gap-[31px] justify-end  w-full">
+                        <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
+                            <p className="top-0 right-[-30px] absolute w-1/2">Kelishilgan muddat davomida dasturiy ta’minotni ommaga tadbiq qilish</p>
+                            <img className="w-[16px] h-[16px]" src={howwe} alt="" />
+                            <div className="howwe-line"></div>
+                        </div>
+                    </div>
+                    <div className="flex gap-[31px] justify-end  w-full">
+                        <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
+                            <p className="top-0 left-[-30px] text-right absolute w-1/2">Keyinchalik ham dasturiy ta’minotni qo’llab quvvatlash va mijoz bilan doimiy aloqa</p>
+                            <img className="w-[16px] h-[16px]" src={howwe} alt="" />
+                        </div>
+                    </div>
                 </article>
             </section>
         </div>

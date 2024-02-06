@@ -5,4 +5,13 @@
     background: rgba(21, 20, 23, 0.5);
     backdrop-filter: blur(12px);
   }
+  .howwe-line {
+    width: 2px;
+    height: 170px;
+    flex-shrink: 0;
+    background: var(
+      --Gradient,
+      linear-gradient(180deg, #cbdcff 0%, #a2c1ff 0.01%, #184399 100%)
+    );
+  }
 }

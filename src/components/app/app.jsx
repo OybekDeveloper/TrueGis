@@ -4,6 +4,9 @@ import './app.scss'
 import Home from '../home/home'
 import Clients from '../clients/clients'
 import Features from '../features/features'
+import Comments from '../comments/comments'
+import Faq from '../faq/faq'
+import Footer from '../footer/footer'
 const App = () => {
     return (
         <div className='app relative '>
@@ -15,6 +18,11 @@ const App = () => {
             </div>
             <Clients />
             <Features />
+            <div className="pt-[100px]">
+                <Comments />
+            </div>
+            <Faq />
+            <Footer />
         </div>
     )
 }
