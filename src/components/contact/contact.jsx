@@ -1,8 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { dog, loc, phone } from "./contact-img";
 import "./contact.scss";
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        username: "",
+        phone: "",
+        massage: "",
+    })
+    const handleInputChange = (e) => {
+        const inputValue = e.target.value.replace(/[^0-9]/g, "");
+        e.target.value = inputValue;
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        })
+    };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        })
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData)
+        setFormData({
+            username: "",
+            phone: "",
+            massage: ""
+        })
+    }
     return (
         <div
             id="contact"
@@ -37,6 +67,9 @@ const Contact = () => {
                                 className="contact-input input-style p-[10px] bg-transparent text-[16px] font-[400] w-[360px]"
                                 type="text"
                                 placeholder="Familiya , Ism"
+                                name="username"
+                                value={formData.username}
+                                onChange={handleChange}
                             />
                         </div>
                         <div className="">
@@ -44,13 +77,19 @@ const Contact = () => {
                             <input
                                 className="contact-input input-style p-[10px] bg-transparent text-[16px] font-[400] w-[360px]"
                                 type="text"
+                                value={formData.phone}
                                 placeholder="+998 (88) 123 45 67"
+                                name="phone"
+                                onChange={handleInputChange} // Add onChange event
                             />
                         </div>
                         <div className="">
                             <div className="">
                                 <label htmlFor="message"></label>
                                 <textarea
+                                    name="massage"
+                                    value={formData.massage}
+                                    onChange={handleChange}
                                     id="message"
                                     rows="4"
                                     className="contact-input input-style p-[10px] bg-transparent text-[16px] font-[400] w-[360px]"
@@ -58,7 +97,7 @@ const Contact = () => {
                                 ></textarea>
                             </div>
                         </div>
-                        <button type="submit" className='msg-btn w-[360px]'>
+                        <button onClick={handleSubmit} type="submit" className='msg-btn w-[360px]'>
                             Yuborish
                         </button>
                     </form>
