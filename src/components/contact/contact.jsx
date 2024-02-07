@@ -3,7 +3,7 @@ import { dog, loc, phone } from './contact-img'
 
 const Contact = () => {
     return (
-        <div className=' pt-[220px] max-w-[1440px] w-10/12 mx-auto flex flex-col items-center mb-[200px]'>
+        <div id="contact" className=' pt-[220px] max-w-[1440px] w-10/12 mx-auto flex flex-col items-center mb-[200px]'>
             <h1 className='text-[32px] font-[600]'>Biz bilan bog’lanish</h1>
             <p className='text-[18px] font-[400] opacity-[0.7] pt-[16px]'>O’z ma’lumotlaringizni qoldiring va biz siz bilan tez orada o’zimiz bog’lanamiz</p>
             <section className='flex pt-[72px] justify-between w-[80%]'>

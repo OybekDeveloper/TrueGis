@@ -32,9 +32,11 @@ const Navbar = () => {
           <a href="#faq" onClick={() => handleLinkClick('faq')}>Ko’p beriladigan savollar</a>
         </li>
       </ul>
-      <button onClick={() => navigate('/contact')} className='msg-btn'>
-        Xabar qoldirish
-      </button>
+      <a href="#contact">
+        <button onClick={() => navigate('/contact')} className='msg-btn'>
+          Xabar qoldirish
+        </button>
+      </a>
     </nav>
   );
 }

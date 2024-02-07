@@ -1,8 +1,10 @@
 import React from "react";
 import "./features.scss";
 import { featureicon, howwe, icon, phone1, phone2, phone3 } from "./features-img";
+import { useNavigate } from "react-router-dom";
 
 const Features = () => {
+    const navigate = useNavigate();
     return (
         <div id="bot_features" className="features max-w-[1440px] w-10/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px]">
             <h1 className="w-[40%] text-[32px] font-[600] text-center">Biznesingizni rivojlantirish uchun
@@ -66,9 +68,11 @@ const Features = () => {
                 <article className="flex flex-col items-start gap-[16px]">
                     <h1 className="text-[29px] font-[600]">Biz bilan o’z biznesingizni yuqori marralarga olib chiqing</h1>
                     <p className="text-[16px] font-[400] opacity-[0.7]">Agar sizga bizning xizmatlarimiz maqul kelgan bo’lsa darhol Xabar qoldirish tugmasi orqali o’z ma’lumotlaringizni qoldiring</p>
-                    <button className='msg-btn mt-[32px]'>
-                        Xabar qoldirish
-                    </button>
+                    <a href="#contact" className='pt-[40px]'>
+                        <button onClick={() => navigate('/contact')} className='msg-btn '>
+                            Xabar qoldirish
+                        </button>
+                    </a>
                 </article>
             </section>
             <section className="w-full flex flex-col justify-center items-center pt-[100px]">

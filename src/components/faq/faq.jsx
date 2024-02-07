@@ -1,6 +1,7 @@
 import React from "react";
 import "./faq.scss";
 import FaqItem from "./faq-item";
+import { useNavigate } from "react-router-dom";
 const data = [
     { id: 1 },
     { id: 2 },
@@ -8,6 +9,7 @@ const data = [
     { id: 4 },
 ];
 const Faq = () => {
+    const navigate = useNavigate()
     return (
         <div id="faq" className="faq max-w-[1440px] flex flex-col w-10/12 mx-auto pt-[100px]  mb-[100px]">
             <div className="flex mb-[100px]">
@@ -30,7 +32,11 @@ const Faq = () => {
                 <h1 className="text-[32px] font-[600]">
                     Biz bilan ishlashga tayyormisiz?
                 </h1>
-                <button className="msg-btn">Xabar qoldirish</button>
+                <a href="#contact" className='pt-[40px]'>
+                    <button onClick={() => navigate('/contact')} className='msg-btn '>
+                        Xabar qoldirish
+                    </button>
+                </a>
             </article>
         </div>
     );
