@@ -14,7 +14,7 @@ const Features = () => {
                         <h1 className="text-[26px]">
                             <span className="span">
                                 Sizga kerak bo’ladigan joy ketegoriyalarining
-                            </span>
+                            </span><br />
                             <span className="span1"> hammasi bir joyda</span>
                         </h1>
                         <p>
@@ -47,7 +47,7 @@ const Features = () => {
                         <h1 className="text-[26px]">
                             <span className="span">
                                 Botning qo’shimcha xususiyatlari sizga ko’proq
-                            </span>
+                            </span><br />
                             <span className="span1"> qulayliklar yaratadi</span>
                         </h1>
                         <p>

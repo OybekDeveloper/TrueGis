@@ -14,9 +14,9 @@ const data = [
 
 const Comments = () => {
     return (
-        <div className="comments w-full mx-auto max-w-[1440px]">
+        <div className="comments w-full mx-auto max-w-[1440px] pb-[64px]">
             <h1 className="text-[32px] font-[600] text-center w-[40%] mx-auto pt-[50px]">Xizmatlarimizdan mamnun mijozlar fikrlari</h1>
-            <div className="cards pt-[64px] pb-[180px]">
+            <div className="cards mt-[64px] mb-[180px]">
                 <div className="card-slide">
                     {data.map(item => (
                         <div key={crypto.randomUUID()} className="card-wrapper inline-flex mx-[16px]">

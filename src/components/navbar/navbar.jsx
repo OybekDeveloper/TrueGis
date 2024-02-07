@@ -19,16 +19,16 @@ const Navbar = () => {
         </div>
       </a>
       <ul className='links flex justify-center items-center gap-[40px]'>
-        <li className={activeLink === 'bot_features' ? 'active-link' : ''}>
+        <li onClick={() => navigate('/')} className={activeLink === 'bot_features' ? 'active-link' : ''}>
           <a href="#bot_features" onClick={() => handleLinkClick('bot_features')}>Bot xususiyatlari</a>
         </li>
-        <li className={activeLink === 'clients' ? 'active-link' : ''}>
+        <li onClick={() => navigate('/')} className={activeLink === 'clients' ? 'active-link' : ''}>
           <a href="#clients" onClick={() => handleLinkClick('clients')}>Bizning mijozlar</a>
         </li>
-        <li className={activeLink === 'comments' ? 'active-link' : ''}>
+        <li onClick={() => navigate('/')} className={activeLink === 'comments' ? 'active-link' : ''}>
           <a href="#comments" onClick={() => handleLinkClick('comments')}>Fikrlar</a>
         </li>
-        <li className={activeLink === 'faq' ? 'active-link' : ''}>
+        <li onClick={() => navigate('/')} className={activeLink === 'faq' ? 'active-link' : ''}>
           <a href="#faq" onClick={() => handleLinkClick('faq')}>Ko’p beriladigan savollar</a>
         </li>
       </ul>
