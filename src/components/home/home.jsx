@@ -17,10 +17,8 @@ const Home = () => {
                     </a>
                 </article>
                 <div className='relative w-full flex justify-center items-center max-lg:pt-[104px] overflow-x-hidden-hidden'>
-                    <div className=' w-[1000px]  h-[1000px] absolute z-[-1]'>
-                        <img src={homebackimg} alt="img" />
-                    </div>
-                    <img className='w-[300px] max-sm:w-[270px] z-10 ' src={homeimg} alt="img" />
+                    <img className=' w-[1000px]  h-[1000px] absolute z-[-1]' src={homebackimg} alt="img" />
+                    <img className='w-[300px] max-sm:w-[270px] z-10' src={homeimg} alt="img" />
                 </div>
             </section>
             <section className='pt-[150px]  grid grid-cols-4 max-lg:grid-cols-2 max-lg:gap-y-[63px]'>
