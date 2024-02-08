@@ -17,9 +17,9 @@ const Home = () => {
                     </a>
                 </article>
                 <div className='relative w-full flex justify-center items-center max-lg:pt-[104px]'>
-                    {/* <div className=' w-[1000px] h-[1000px] absolute z-[-1]'>
+                    <div className=' w-[800px]  h-[800px] absolute z-[-1]'>
                         <img src={homebackimg} alt="img" />
-                    </div> */}
+                    </div>
                     <img className='w-[300px] max-sm:w-[270px] z-10 ' src={homeimg} alt="img" />
                 </div>
             </section>
