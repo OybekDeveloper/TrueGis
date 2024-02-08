@@ -36,14 +36,14 @@ const Contact = () => {
     return (
         <div
             id="contact"
-            className="contact pt-[150px] max-w-[1440px] w-10/12 mx-auto flex flex-col items-center mb-[200px]"
+            className="contact pt-[150px] max-w-[1440px] w-10/12     mx-auto flex flex-col items-center mb-[200px]"
         >
             <h1 className="text-[32px] font-[600]">Biz bilan bog’lanish</h1>
             <p className="text-[18px] font-[400] opacity-[0.7] pt-[16px]">
                 O’z ma’lumotlaringizni qoldiring va biz siz bilan tez orada o’zimiz
                 bog’lanamiz
             </p>
-            <section className="flex pt-[72px] justify-between w-[80%]">
+            <section className="flex max-lg:flex-col-reverse pt-[72px]  max-lg:gap-[96px] justify-between     w-full">
                 <div className="contact-me flex flex-col gap-[40px] w-[310px]">
                     <h1 className="text-[23px] font-[500]">Aloqa ma’lumotlari</h1>
                     <div className="flex justify-start items-center gap-[12px]">
@@ -59,12 +59,12 @@ const Contact = () => {
                         <p>3891 Ranchview Dr. Richardson, California 62639</p>
                     </div>
                 </div>
-                <div className="contact-you w-1/2">
-                    <form className="contact-form flex flex-col items-center gap-[42px]">
-                        <div className="">
+                <div className="contact-you w-1/2 max-lg:w-full">
+                    <form className="contact-form flex flex-col items-center max-lg:items-start gap-[42px]">
+                        <div className="w-[70%] max-lg:w-full">
                             <label htmlFor="text"></label>
                             <input
-                                className="contact-input input-style p-[10px] bg-transparent text-[16px] font-[400] w-[360px]"
+                                className="contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form"
                                 type="text"
                                 placeholder="Familiya , Ism"
                                 name="username"
@@ -72,10 +72,10 @@ const Contact = () => {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="">
+                        <div className="w-[70%] max-lg:w-full">
                             <label htmlFor="text"></label>
                             <input
-                                className="contact-input input-style p-[10px] bg-transparent text-[16px] font-[400] w-[360px]"
+                                className="contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form"
                                 type="text"
                                 value={formData.phone}
                                 placeholder="+998 (88) 123 45 67"
@@ -83,7 +83,7 @@ const Contact = () => {
                                 onChange={handleInputChange} // Add onChange event
                             />
                         </div>
-                        <div className="">
+                        <div className="w-[70%] max-lg:w-full">
                             <div className="">
                                 <label htmlFor="message"></label>
                                 <textarea
@@ -92,12 +92,12 @@ const Contact = () => {
                                     onChange={handleChange}
                                     id="message"
                                     rows="4"
-                                    className="contact-input input-style p-[10px] bg-transparent text-[16px] font-[400] w-[360px]"
+                                    className="contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form"
                                     placeholder="Xabaringizni yozing"
                                 ></textarea>
                             </div>
                         </div>
-                        <button onClick={handleSubmit} type="submit" className='msg-btn w-[360px]'>
+                        <button onClick={handleSubmit} type="submit" className='msg-btn flex w-[70%] max-lg:w-full'>
                             Yuborish
                         </button>
                     </form>

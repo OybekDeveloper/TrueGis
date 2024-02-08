@@ -17,7 +17,6 @@
     color: transparent;
   }
   .msg-btn {
-    display: inline-flex;
     padding: 10px 20px;
     justify-content: center;
     align-items: center;
@@ -26,7 +25,7 @@
     border: 1px solid #a2c1ff;
     background: linear-gradient(105deg, #7aa6ff 13.43%, #2970ff 52.88%);
     box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
-    transition: background 0.3 ease-in-out border 0.3s ease-in-out;
+    transition: background 0.3 ease-in-out, border 0.3s ease-in-out;
     &:hover {
       border: 1px solid #2059cc;
       background: linear-gradient(105deg, #2970ff 13.43%, #7aa6ff 52.88%);

@@ -12,17 +12,17 @@ const Faq = () => {
     const navigate = useNavigate()
     return (
         <div id="faq" className="faq max-w-[1440px] flex flex-col w-10/12 mx-auto pt-[100px]  mb-[100px]">
-            <div className="flex mb-[100px]">
-                <article className="w-1/2 flex flex-col items-start gap-[16px]">
+            <div className="flex max-lg:flex-col mb-[100px]  max-lg:gap-[88px]">
+                <article className="w-1/2 max-lg:w-full flex flex-col items-start gap-[16px]">
                     <h1 className="text-[32px] font-[600]">Ko’p beriladigan savollar</h1>
                     <p className="text-[16px] font-[400] opacity-[0.7] w-[60%]">
                         Qo’shimcha savollaringiz bormi?{" "}
                         <a href="/" className="text-[#2051b6]">@truegis_bot</a> manziliga
                         telegram orqali bog’laning
                     </p>
-                    <button className="msg-btn mt-[32px]">Telegramdan yozish</button>
+                    <button className="msg-btn mt-[32px] flex">Telegramdan yozish</button>
                 </article>
-                <section className="w-1/2">
+                <section className="w-1/2 max-lg:w-full">
                     {data.map((item) => (
                         <FaqItem key={crypto.randomUUID()} />
                     ))}

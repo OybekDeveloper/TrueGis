@@ -77,7 +77,7 @@ const cards = [
 ]
 const Clients = () => {
     return (
-        <div id='clients' className='clients max-w-[1440px]  mx-auto pt-[100px] flex flex-col items-center mb-[100px] overflow-hidden'>
+        <div id='clients' className='clients max-w-[1440px] max-lg:w-11/12   mx-auto pt-[100px] flex flex-col items-center mb-[100px] overflow-hidden'>
             <h1 className='text-[32px] font-[600]'>Bizning mijozlarimiz</h1>
             <div className='cards pt-[64px]'>
                 <div className="card-slide">
@@ -111,16 +111,16 @@ const Clients = () => {
                     ))}
                 </div>
             </div>
-            <article className='relative flex flex-col items-center mt-[200px] gap-[64px]'>
+            <article className='relative w-full flex flex-col items-center mt-[200px] gap-[64px]'>
                 <div className='absolute top-10 left-20 z-[-1]'>
                     <img className='w-[440px]' src={clientback} alt="back" />
                 </div>
                 <h1 className='text-[32px]'>Nima uchun bizni tanlashadi?</h1>
-                <div className="card-container flex gap-[24px]">
+                <div className="card-container grid grid-cols-4 max-lg:grid-cols-2  gap-[24px]">
                     {cards.map(item => (
-                        <div className="card flex flex-col gap-[32px] p-[32px] w-[300px]" key={item.id}>
+                        <div className="card mx-auto flex flex-col gap-[32px] p-[32px] max-xl:p-[16px] w-[300px] max-xl:w-[230px] max-lg:w-full " key={item.id}>
                             <img className='w-[56px] h-[56px]' src={item.url} alt={item.title} />
-                            <h1>{item.title}</h1>
+                            <h1 className='text-[20px] font-[500] max-lg:w-[70%]'>{item.title}</h1>
                         </div>
                     ))}
                 </div>
