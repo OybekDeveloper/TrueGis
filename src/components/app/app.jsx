@@ -12,10 +12,10 @@ import Contact from '../contact/contact'
 const App = () => {
     return (
         <div className='app relative'>
-            <div className="top-0 left-0 fixed w-full z-[999] bg-[#0a090c]">
+            <div className=" top-0 left-0 fixed w-full z-[999] bg-[#0a090c]">
                 <Navbar />
             </div>
-            <div id='blur-effect'>
+            <div id='blur-effect' className=''>
                 <Routes >
                     <Route path='/' element={
                         <>

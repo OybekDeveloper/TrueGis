@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { line, plus } from "./faq-img";
+import {  plus } from "./faq-img";
 
 const FaqItem = () => {
     const [active, setActive] = useState(false);
