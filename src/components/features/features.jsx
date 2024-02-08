@@ -17,7 +17,7 @@ const Features = () => {
             id="bot_features"
             className="features max-w-[1440px] w-10/12 max-lg:w-11/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px] max-sm:mb-0"
         >
-            <h1 className=" text-[32px] max-sm:text-[29px] font-[600] text-center">
+            <h1 className="text-[32px] font-[700] max-sm:text-[29px] sm:text-center">
                 Biznesingizni rivojlantirish uchun
                 <br className="max-sm:hidden" />
                 botimiz xizmatlari
@@ -124,13 +124,13 @@ const Features = () => {
                 </article>
             </section>
             <section className="w-full flex flex-col justify-center items-center pt-[100px] max-sm:pt-0">
-                <h1 className="text-[32px] max-sm:text-[29px] font-[600]">
+                <h1 className="text-[32px] max-sm:text-[29px] font-[700]">
                     Biz qanday ishlaymiz?
                 </h1>
-                <article className=" w-[70%] max-xl:w-[80%] max-lg:w-[80%] max-sm:w-full flex flex-col  justify-center items-center gap-[10px] pt-[74px] mb-[50px]">
+                <article className=" w-[70%] max-xl:w-[80%] max-lg:w-[80%] max-sm:w-full flex flex-col  justify-center items-center gap-[5px] pt-[74px] mb-[50px]">
                     <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
                         <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
-                            <p className="text-[20px] max-md:text-[18px] top-0 font-[500] right-[-30px] absolute w-1/2">
+                            <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] right-[-30px] absolute w-1/2">
                                 Mijozlar bilan dastlabki uchrashuv va kelishuv shartlari haqida
                                 batafsil muloqot
                             </p>
@@ -140,7 +140,7 @@ const Features = () => {
                     </div>
                     <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
                         <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
-                            <p className="text-[20px] max-md:text-[18px] top-0 font-[500] left-[-30px] text-right absolute w-1/2">
+                            <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] left-[-30px] text-right absolute w-1/2">
                                 Kelishuvga binoan dasturiy mahsulotni ishlab chiqish va bot
                                 xizmatlariga qo’shish
                             </p>
@@ -150,7 +150,7 @@ const Features = () => {
                     </div>
                     <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
                         <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
-                            <p className="text-[20px] max-md:text-[18px] top-0 font-[500] right-[-30px] absolute w-1/2">
+                            <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] right-[-30px] absolute w-1/2">
                                 Kelishilgan muddat davomida dasturiy ta’minotni ommaga tadbiq
                                 qilish
                             </p>
@@ -160,7 +160,7 @@ const Features = () => {
                     </div>
                     <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
                         <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
-                            <p className="text-[20px] max-md:text-[18px] top-0 font-[500] left-[-30px] text-right absolute w-1/2">
+                            <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] left-[-30px] text-right absolute w-1/2">
                                 Keyinchalik ham dasturiy ta’minotni qo’llab quvvatlash va mijoz
                                 bilan doimiy aloqa
                             </p>
@@ -169,7 +169,7 @@ const Features = () => {
                     </div>
                     {/* sm  dan keyingi qism */}
                     <div className="flex sm:hidden">
-                        <div className="flex flex-col justify-center items-center  relative gap-[10px] w-[10%] ml-0">
+                        <div className="flex flex-col justify-center items-center  relative gap-[10px] w-[10%] ml-0 pt-[6px]">
                             <img className="w-[16px] h-[16px]" src={howwe} alt="" />
                             <div className="howwe-line"></div>
                         </div>
@@ -179,7 +179,7 @@ const Features = () => {
                         </p>
                     </div>
                     <div className="flex sm:hidden">
-                        <div className="flex flex-col justify-center items-center  relative gap-[10px] w-[10%] ml-0">
+                        <div className="flex flex-col justify-center items-center  relative gap-[10px] w-[10%] ml-0 pt-[6px]">
                             <img className="w-[16px] h-[16px]" src={howwe} alt="" />
                             <div className="howwe-line"></div>
                         </div>
@@ -189,7 +189,7 @@ const Features = () => {
                         </p>
                     </div>
                     <div className="flex sm:hidden">
-                        <div className="flex flex-col justify-center items-center  relative gap-[10px] w-[10%] ml-0">
+                        <div className="flex flex-col justify-center items-center  relative gap-[10px] w-[10%] ml-0 pt-[6px]">
                             <img className="w-[16px] h-[16px]" src={howwe} alt="" />
                             <div className="howwe-line"></div>
                         </div>
@@ -199,7 +199,7 @@ const Features = () => {
                         </p>
                     </div>
                     <div className="flex sm:hidden">
-                        <div className="flex flex-col justify-start items-center  relative gap-[10px] w-[10%] ml-0">
+                        <div className="flex flex-col justify-start items-center  relative gap-[10px] w-[10%] ml-0 pt-[6px]">
                             <img className="w-[16px] h-[16px] ml-[3px]" src={howwe} alt="" />
                         </div>
                         <p className="text-[20px] max-md:text-[18px] font-[500] w-[80%]">
