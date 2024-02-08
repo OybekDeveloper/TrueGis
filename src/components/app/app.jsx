@@ -19,9 +19,9 @@ const App = () => {
                 <Routes >
                     <Route path='/' element={
                         <>
-                            {/* <div className='w-full relative overflow-hidden'>
+                            <div className='w-full relative overflow-hidden'>
                                 <Home />
-                            </div> */}
+                            </div>
                             <Clients />
                             <Features />
                             <div id='comments' className="pt-[88px]">
