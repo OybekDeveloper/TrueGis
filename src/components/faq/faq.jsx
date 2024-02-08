@@ -34,7 +34,7 @@ const Faq = () => {
                 <h1 className="text-[32px] font-[600] text-center">
                     Biz bilan ishlashga tayyormisiz?
                 </h1>
-                <a href="#contact" className='pt-[40px] w-full'>
+                <a href="#contact" className='pt-[40px] max-sm:w-full'>
                     <button onClick={() => navigate('/contact')} className='msg-btn w-full'>
                         Xabar qoldirish
                     </button>
