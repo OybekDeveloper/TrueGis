@@ -50,7 +50,7 @@ const Navbar = () => {
           <h1 className="text-[23px] font-[500]">TrueGis</h1>
         </div>
       </a>
-      <ul className="max-lg:hidden links flex justify-center items-center gap-[40px]">
+      <ul className="max-lg:hidden links flex justify-center items-center gap-[40px] font-[500]">
         <li
           onClick={() => handleLinkClick("bot_features")}
           className={activeLink === "bot_features" ? "active-link" : ""}

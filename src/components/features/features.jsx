@@ -33,7 +33,7 @@ const Features = () => {
                             <br />
                             <span className="span1"> hammasi bir joyda</span>
                         </h1>
-                        <p className="text-[16px] font-[500] opacity-[0.8] pb-[70px]">
+                        <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
                             Tez-tez qidiriladigan joylar kategoriyalar ya’ni bankomatlar,
                             ovqatlanish joylari, avtoservislar, dorixonalar, go’zallik
                             salonlari va boshqa kerakli joy manzillarini tezda va sizga eng
@@ -56,7 +56,7 @@ const Features = () => {
                                 Har bir joy haqida sizga to’liq ma’lumot beradi
                             </span>
                         </h1>
-                        <p className="text-[16px] font-[500] opacity-[0.8] pb-[70px]">
+                        <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
                             Sizga eng yaqin joygacha bo’lgan masofani o’lchash, u joyning
                             ishlash vaqti va ayni vaqtda ochiq yoki yopiqligi haqida ma’lumot
                             beradi. Yana qo’shimcha aloqa raqamini va o’sha joygacha bo’lgan
@@ -81,7 +81,7 @@ const Features = () => {
                             <br />
                             <span className="span1"> qulayliklar yaratadi</span>
                         </h1>
-                        <p className="text-[16px] font-[500] opacity-[0.8] pb-[70px]">
+                        <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
                             Bot orqali siz aviabiletlar haqida ma’lumotlar olishingiz va
                             ularga buyurtma berishingiz mumkin. Agar siz chet elda bo’lsangiz
                             terjimon xizmatidan ham foydalanishingiz mumkin

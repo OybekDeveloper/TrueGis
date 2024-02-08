@@ -14,7 +14,7 @@ const data = [
 
 const Comments = () => {
     return (
-        <div className="comments w-full mx-auto max-w-[1440px] pb-[64px]">
+        <div className="comments w-full mx-auto  pb-[64px]">
             <h1 className="text-[32px] font-[600] text-center mx-auto pt-[50px]">Xizmatlarimizdan mamnun mijozlar <br /> fikrlari</h1>
             <div className="cards mt-[64px] mb-[180px]">
                 <div className="card-slide">

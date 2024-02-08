@@ -45,7 +45,7 @@
 
 @font-face {
   font-family: 'Overused Grotesk';
-  font-weight: 300;
+  font-weight: 400;
   font-display: swap;
   src: local('Overused Grotesk Regular'), url(../fonts/woff2/OverusedGrotesk-Light.woff2) format('woff2'), url(../fonts/woff/OverusedGrotesk-Light.woff) format('woff');
 }
