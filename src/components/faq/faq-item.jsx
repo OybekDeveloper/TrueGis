@@ -18,7 +18,7 @@ const FaqItem = () => {
                 onClick={() => setActive(!active)}
                 className="flex justify-between items-center cursor-pointer"
             >
-                <h1 className="text-[18px] font-[500] py-[24px]">
+                <h1 className="text-[18px] max-sm:text-[16px] font-[500] py-[24px]">
                     TrueGis botining boshqa botlarda farqi nimada?
                 </h1>
                 <img className={`faqbtn__img ${active && "active"} w-[32px] h-[32px]`} src={plus} alt="" />

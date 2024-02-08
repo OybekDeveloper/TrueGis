@@ -16,6 +16,9 @@
     font-weight: bold;
     color: transparent;
   }
+  .blur-effect {
+    filter: blur(8px);
+  }
   .msg-btn {
     padding: 10px 20px;
     justify-content: center;

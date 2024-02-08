@@ -15,23 +15,25 @@ const App = () => {
             <div className="top-0 left-0 fixed w-full z-[999] bg-[#0a090c]">
                 <Navbar />
             </div>
-            <Routes>
-                <Route path='/' element={
-                    <>
-                        <div className='w-full relative overflow-hidden'>
-                            <Home />
-                        </div>
-                        <Clients />
-                        <Features />
-                        <div id='comments' className="pt-[88px]">
-                            <Comments />
-                        </div>
-                        <Faq />
-                    </>
-                } />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
-            <Footer />
+            <div id='blur-effect'>
+                <Routes >
+                    <Route path='/' element={
+                        <>
+                            <div className='w-full relative overflow-hidden'>
+                                <Home />
+                            </div>
+                            <Clients />
+                            <Features />
+                            <div id='comments' className="pt-[88px]">
+                                <Comments />
+                            </div>
+                            <Faq />
+                        </>
+                    } />
+                    <Route path='/contact' element={<Contact />} />
+                </Routes>
+                <Footer />
+            </div>
         </div>
     )
 }

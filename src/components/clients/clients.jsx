@@ -112,15 +112,15 @@ const Clients = () => {
                 </div>
             </div>
             <article className='relative w-full flex flex-col items-center mt-[200px] gap-[64px]'>
-                <div className='absolute top-10 left-20 z-[-1]'>
+                <div className='absolute top-10 lg:left-20 max-lg:top-[160px] max-sm:top-[600px]'>
                     <img className='w-[440px]' src={clientback} alt="back" />
                 </div>
                 <h1 className='text-[32px]'>Nima uchun bizni tanlashadi?</h1>
-                <div className="card-container grid grid-cols-4 max-lg:grid-cols-2  gap-[24px]">
+                <div className="card-container grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1  gap-[24px] max-sm:gap-[40px]">
                     {cards.map(item => (
-                        <div className="card mx-auto flex flex-col gap-[32px] p-[32px] max-xl:p-[16px] w-[300px] max-xl:w-[230px] max-lg:w-full " key={item.id}>
+                        <div className="card mx-auto flex flex-col gap-[32px] p-[32px] max-xl:p-[16px] max-sm:p-[32px] w-[300px] max-sm:h-[280px]  max-xl:w-[230px] max-lg:w-full " key={item.id}>
                             <img className='w-[56px] h-[56px]' src={item.url} alt={item.title} />
-                            <h1 className='text-[20px] font-[500] max-lg:w-[70%]'>{item.title}</h1>
+                            <h1 className='text-[20px] font-[500] max-lg:w-[70%] max-md:w-[90%]'>{item.title}</h1>
                         </div>
                     ))}
                 </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    setIsOpen(false);
+    setIsOpen(!isOpen);
     navigate("/");
   };
   const handleActive = () => {
@@ -20,16 +20,18 @@ const Navbar = () => {
       x: isOpen ? '100%' : 0,
       transition: { duration: 0.5, staggerChildren: 0.1 },
     });
-    setIsOpen(!isOpen);
     setActiveLink("");
   };
 
   useEffect(() => {
     const body = document.body;
+    const blur = document.querySelector("#blur-effect")
     if (isOpen) {
       body.classList.add("no-scroll");
+      blur.classList.add("blur-effect");
     } else {
       body.classList.remove("no-scroll");
+      blur.classList.remove("blur-effect");
     }
   }, [isOpen]);
 
@@ -82,14 +84,28 @@ const Navbar = () => {
           Xabar qoldirish
         </button>
       </a>
-      <div onClick={handleActive} className="menu lg:hidden">
+      <div className="menu lg:hidden flex justify-center items-center gap-[18px]">
+        <a href="#contact">
+          <button
+            onClick={() => {
+              navigate("/contact");
+              setIsOpen(false);
+            }}
+            className="msg-btn flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
+          >
+            Xabar qoldirish
+          </button>
+        </a>
+
         <img
-          className={`${isOpen ? "hidden" : "block"} w-[28px] h-[28px]`}
+          onClick={handleActive}
+          className={`${isOpen ? "hidden" : "block"} w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
           src={menu}
           alt="menu"
         />
         <img
-          className={`${isOpen ? "block" : "hidden"} w-[28px] h-[28px]`}
+          onClick={handleActive}
+          className={`${isOpen ? "block" : "hidden"} w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
           src={close}
           alt="menu"
         />
@@ -99,9 +115,9 @@ const Navbar = () => {
         animate={{ opacity: 1, x: isOpen ? 0 : "100%" }}
         exit={{ opacity: 0, x: 0 }}
         transition={{ duration: 0.5 }}
-        className={`flex navbar2  flex-col absolute p-10 gap-[72px] right-0 top-[80px] bg-[#0a090c] w-full h-screen`}
+        className={`flex navbar2  flex-col absolute px-[20px] gap-[72px] right-0 top-[80px] bg-[#0a090c] w-full max-sm:w-[70%] h-screen`}
       >
-        <ul className="text-[23px] font-[600] n links flex flex-col  items-end gap-[40px] pt-[52px]">
+        <ul className="text-[23px] max-sm:text-[16px] font-[600] links flex flex-col  items-end gap-[40px] max-sm:gap-[24px] pt-[52px] max-sm:pt-[44px]">
           <li
             onClick={() => handleLinkClick("bot_features")}
             className={activeLink === "bot_features" ? "active-link" : ""}
@@ -133,7 +149,7 @@ const Navbar = () => {
               navigate("/contact");
               setIsOpen(false);
             }}
-            className="msg-btn flex  w-full"
+            className="msg-btn flex  w-full max-sm:hidden"
           >
             Xabar qoldirish
           </button>
