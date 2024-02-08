@@ -104,7 +104,7 @@ const Features = () => {
                         alt="icon"
                     />
                 </div>
-                <article className="flex flex-col items-start gap-[16px] max-sm:gap-[24px] w-[60%] max-sm:w-full text-center">
+                <article className="flex flex-col items-start gap-[16px] max-sm:gap-[24px] w-[60%] max-sm:w-full max-sm:text-center">
                     <h1 className="text-[29px] max-lg:text-[26px] max-sm:text-[23px] font-[600]">
                         Biz bilan o’z biznesingizni yuqori <br className="max-sm:hidden" />{" "}
                         marralarga olib chiqing

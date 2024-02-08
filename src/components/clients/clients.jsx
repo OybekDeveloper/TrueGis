@@ -115,7 +115,7 @@ const Clients = () => {
                 <div className='absolute top-10 lg:left-20 max-lg:top-[160px] max-sm:top-[600px]'>
                     <img className='w-[440px]' src={clientback} alt="back" />
                 </div>
-                <h1 className='text-[32px]'>Nima uchun bizni tanlashadi?</h1>
+                <h1 className='text-[32px] text-center'>Nima uchun bizni tanlashadi?</h1>
                 <div className="card-container grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1  gap-[24px] max-sm:gap-[40px]">
                     {cards.map(item => (
                         <div className="card mx-auto flex flex-col gap-[32px] p-[32px] max-xl:p-[16px] max-sm:p-[32px] w-[300px] max-sm:h-[280px]  max-xl:w-[230px] max-lg:w-full " key={item.id}>

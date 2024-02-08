@@ -25,19 +25,19 @@ const Home = () => {
             </section>
             <section className='pt-[150px]  grid grid-cols-4 max-lg:grid-cols-2 max-lg:gap-y-[63px]'>
                 <div className='text-center'>
-                    <h1 className='text-[32px] span1 font-[600]'>10,000+</h1>
+                    <h1 className='text-[32px] span1 font-[600] max-sm:font-[500]'>10,000+</h1>
                     <p className='text-[20px] font-[500] pt-[16px]'>Obunachilar</p>
                 </div>
                 <div className='text-center'>
-                    <h1 className='text-[32px] span1 font-[600]'>4,000+</h1>
+                    <h1 className='text-[32px] span1 font-[600] max-sm:font-[500]'>4,000+</h1>
                     <p className='text-[20px] font-[500] pt-[16px]'>Faol obunachilar</p>
                 </div>
                 <div className='text-center'>
-                    <h1 className='text-[32px] span1 font-[600]'>25+</h1>
+                    <h1 className='text-[32px] span1 font-[600] max-sm:font-[500]'>25+</h1>
                     <p className='text-[20px] font-[500] pt-[16px]'>Kompaniyalar</p>
                 </div>
                 <div className='text-center'>
-                    <h1 className='text-[32px] span1 font-[600]'>14+</h1>
+                    <h1 className='text-[32px] span1 font-[600] max-sm:font-[500]'>14+</h1>
                     <p className='text-[20px] font-[500] pt-[16px]'>Joy kataloglari</p>
                 </div>
             </section>
