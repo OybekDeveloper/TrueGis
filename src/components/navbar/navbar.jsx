@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    setIsOpen(!isOpen);
+    setIsOpen(false);
     navigate("/");
   };
   const handleActive = () => {
