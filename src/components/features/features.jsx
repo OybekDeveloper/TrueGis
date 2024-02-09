@@ -9,9 +9,13 @@ import {
     phone3,
 } from "./features-img";
 import { useNavigate } from "react-router-dom";
+import { useScrolled } from "../hooks/use-scroled";
+
 
 const Features = () => {
     const navigate = useNavigate();
+    const scroled = useScrolled("bot_features");
+    console.log(scroled);
     return (
         <div
             id="bot_features"
@@ -23,7 +27,7 @@ const Features = () => {
                 botimiz xizmatlari
             </h1>
             <section className="pt-[100px] max-sm:pt-[64px] mb-[200px] max-sm:mb-[100px] flex flex-col gap-[120px] items-center justify-center">
-                <div className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center ">
+                <div id="1" className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center ">
                     <article className="w-1/2 max-sm:w-full flex flex-col gap-[32px]">
                         <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
                         <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
@@ -48,7 +52,7 @@ const Features = () => {
                         />
                     </div>
                 </div>
-                <div className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center ">
+                <div id="2" className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center ">
                     <article className="w-1/2 max-sm:w-full flex flex-col gap-[32px]">
                         <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
                         <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
@@ -71,7 +75,7 @@ const Features = () => {
                         />
                     </div>
                 </div>
-                <div className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center ">
+                <div id="1" className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center ">
                     <article className="w-1/2 max-sm:w-full flex flex-col gap-[32px]">
                         <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
                         <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
@@ -113,7 +117,7 @@ const Features = () => {
                         Agar sizga bizning xizmatlarimiz maqul kelgan bo’lsa darhol Xabar
                         qoldirish tugmasi orqali o’z ma’lumotlaringizni qoldiring
                     </p>
-                    <a href="#contact" className="pt-[40px] max-sm:w-full">
+                    <a href="#contact" className="pt-[20px] max-sm:w-full">
                         <button
                             onClick={() => navigate("/contact")}
                             className="msg-btn flex max-sm:w-full"

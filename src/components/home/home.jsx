@@ -10,7 +10,7 @@ const Home = () => {
                 <article className='w-full flex flex-col max-lg:items-center gap-[24px]  items-start max-lg:text-center max-lg:w-2/3 max-sm:w-11/12'>
                     <h1 className='text-[32px] font-[700] max-sm:text-[29px]'><span className='span'>TrueGis:</span> sizga eng yaqin bo’lgan joylarni topish yanada oson va telegramning o’zida</h1>
                     <p className='text-[18px] opacity-[0.7] font-[400] '>Telegramdan chiqmagan holda sizga eng yaqin  bo’lgan do’konlar, bankomatlar, dorixonalar, ovqatlanish joylari va boshqa kerakli joylarni bir zumda toping</p>
-                    <a href="#contact" className='pt-[40px] max-sm:w-full'>
+                    <a href="#contact" className='pt-[20px] max-sm:w-full'>
                         <button onClick={() => navigate('/contact')} className='msg-btn flex max-sm:w-full'>
                             Xabar qoldirish
                         </button>

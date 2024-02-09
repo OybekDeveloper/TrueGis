@@ -21,7 +21,7 @@ const Faq = () => {
                         telegram orqali bog’laning
                     </p>
                     <a href="/" className="max-sm:hidden">
-                        <button className="msg-btn mt-[32px] flex">Telegramdan yozish</button>
+                        <button className="msg-btn mt-[20px] flex">Telegramdan yozish</button>
                     </a>
                 </article>
                 <section className="w-1/2 max-lg:w-full">
@@ -30,11 +30,11 @@ const Faq = () => {
                     ))}
                 </section>
             </div>
-            <article className="w-full flex flex-col gap-[64px] justify-center items-center pt-[100px] max-sm:pt-0">
+            <article className="w-full flex flex-col gap-[50px] justify-center items-center pt-[100px] max-sm:pt-0">
                 <h1 className="text-[32px] font-[700] text-center">
                     Biz bilan ishlashga tayyormisiz?
                 </h1>
-                <a href="#contact" className='pt-[40px] max-sm:w-full'>
+                <a href="#contact" className='max-sm:w-full'>
                     <button onClick={() => navigate('/contact')} className='msg-btn w-full'>
                         Xabar qoldirish
                     </button>

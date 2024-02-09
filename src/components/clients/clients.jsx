@@ -28,27 +28,27 @@ const clients = [
         url: Starbucks
     },
     {
-        id: 1,
+        id: 6,
         title: "Gillette",
         url: Gillette
     },
     {
-        id: 2,
+        id: 7,
         title: "Louis Vuitton",
         url: LouisVuitton
     },
     {
-        id: 3,
+        id: 8,
         title: "Gillette",
         url: Gillette
     },
     {
-        id: 4,
+        id: 9,
         title: "McDonald's",
         url: McDonald
     },
     {
-        id: 5,
+        id: 10,
         title: "Starbucks",
         url: Starbucks
     },
@@ -111,14 +111,14 @@ const Clients = () => {
                     ))}
                 </div>
             </div>
-            <article className='relative w-full flex flex-col items-center mt-[200px] gap-[64px]'>
-                <div className='absolute top-10 lg:left-20 max-lg:top-[160px] max-sm:top-[600px]'>
+            <article className='relative w-full max-w-[1440px] max-auto flex flex-col items-center mt-[200px] gap-[64px]'>
+                <div className='absolute top-10 lg:left-24 max-lg:top-[160px] max-sm:top-[600px]'>
                     <img className='w-[440px]' src={clientback} alt="back" />
                 </div>
                 <h1 className='text-[32px] font-[700] text-center'>Nima uchun bizni tanlashadi?</h1>
                 <div className="card-container grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1  gap-[24px] max-sm:gap-[40px]">
                     {cards.map(item => (
-                        <div className="card mx-auto flex flex-col gap-[32px] p-[32px] max-xl:p-[16px] max-sm:p-[32px] w-[300px] max-sm:h-[280px]  max-xl:w-[230px] max-lg:w-full " key={item.id}>
+                        <div key={crypto.randomUUID()} className="card mx-auto flex flex-col gap-[32px] p-[32px] max-xl:p-[16px] max-sm:p-[32px] w-[300px] max-sm:h-[280px]  max-xl:w-[230px] max-lg:w-full">
                             <img className='w-[56px] h-[56px]' src={item.url} alt={item.title} />
                             <h1 className='text-[20px] font-[500] max-lg:w-[70%] max-md:w-[90%]'>{item.title}</h1>
                         </div>
