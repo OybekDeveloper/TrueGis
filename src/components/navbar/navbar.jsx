@@ -115,7 +115,7 @@ const Navbar = () => {
         animate={{ opacity: 1, x: isOpen ? 0 : "100%" }}
         exit={{ opacity: 0, x: 0 }}
         transition={{ duration: 0.5 }}
-        className={`flex navbar2  flex-col absolute px-[20px] gap-[72px] right-0 top-[80px] bg-[#0a090c] w-full max-sm:w-[70%] h-screen`}
+        className={`lg:hidden flex navbar2  flex-col absolute px-[20px] gap-[72px] right-0 top-[80px] bg-[#0a090c] w-full max-sm:w-[70%] h-screen`}
       >
         <ul className="text-[23px] max-sm:text-[16px] font-[600] links flex flex-col  items-end gap-[40px] max-sm:gap-[24px] pt-[52px] max-sm:pt-[44px]">
           <li

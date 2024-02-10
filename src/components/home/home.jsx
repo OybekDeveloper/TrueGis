@@ -1,7 +1,7 @@
 import React from 'react'
 import { homeimg, homebackimg, } from '../imgs';
-import './home.scss'
 import { useNavigate } from 'react-router-dom';
+import './home.scss'
 const Home = () => {
     const navigate = useNavigate()
     return (
@@ -17,7 +17,7 @@ const Home = () => {
                     </a>
                 </article>
                 <div className='relative w-full flex justify-center items-center max-lg:pt-[104px]'>
-                    <div className='w-[1000px] h-[1000px] absolute z-[-1]'>
+                    <div className='w-[1000px] h-[1000px] absolute z-[-1] max-sm:hidden'>
                         <img src={homebackimg} alt="img" />
                     </div>
                     <img className='w-[300px] max-sm:w-[270px] z-10 ' src={homeimg} alt="img" />

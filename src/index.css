@@ -70,3 +70,9 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
+@media (min-width: 1025px) {
+  .no-scroll {
+    overflow: auto;
+  }
+}
