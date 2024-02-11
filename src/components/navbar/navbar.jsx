@@ -78,7 +78,7 @@ const Navbar = () => {
       </ul>
       <a href="#contact ">
         <button
-          onClick={() => navigate("/contact")}
+          onClick={() => { navigate("/contact"); setActiveLink("") }}
           className="msg-btn flex max-lg:hidden"
         >
           Xabar qoldirish
@@ -90,6 +90,7 @@ const Navbar = () => {
             onClick={() => {
               navigate("/contact");
               setIsOpen(false);
+              setActiveLink('')
             }}
             className="msg-btn flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
           >
@@ -99,17 +100,15 @@ const Navbar = () => {
 
         <img
           onClick={handleActive}
-          className={`${
-            isOpen ? "hidden" : "block"
-          } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
+          className={`${isOpen ? "hidden" : "block"
+            } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
           src={menu}
           alt="menu"
         />
         <img
           onClick={handleActive}
-          className={`${
-            isOpen ? "block" : "hidden"
-          } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
+          className={`${isOpen ? "block" : "hidden"
+            } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
           src={close}
           alt="menu"
         />

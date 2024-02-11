@@ -14,7 +14,7 @@ const data = [
 
 const Comments = () => {
   return (
-    <div className="comments w-full mx-auto  pb-[64px]">
+    <div className="comment w-full mx-auto  pb-[64px]">
       <h1 className="text-[32px] font-[700] text-center mx-auto pt-[50px]">
         Xizmatlarimizdan mamnun mijozlar <br className="max-sm:hidden" />{" "}
         fikrlari
