@@ -17,7 +17,7 @@ const Navbar = () => {
   const handleActive = () => {
     setIsOpen(!isOpen);
     controls.start({
-      x: isOpen ? '100%' : 0,
+      x: isOpen ? "100%" : 0,
       transition: { duration: 0.5, staggerChildren: 0.1 },
     });
     setActiveLink("");
@@ -25,7 +25,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const body = document.body;
-    const blur = document.querySelector("#blur-effect")
+    const blur = document.querySelector("#blur-effect");
     if (isOpen) {
       body.classList.add("no-scroll");
       blur.classList.add("blur-effect");
@@ -99,13 +99,17 @@ const Navbar = () => {
 
         <img
           onClick={handleActive}
-          className={`${isOpen ? "hidden" : "block"} w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
+          className={`${
+            isOpen ? "hidden" : "block"
+          } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
           src={menu}
           alt="menu"
         />
         <img
           onClick={handleActive}
-          className={`${isOpen ? "block" : "hidden"} w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
+          className={`${
+            isOpen ? "block" : "hidden"
+          } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
           src={close}
           alt="menu"
         />
