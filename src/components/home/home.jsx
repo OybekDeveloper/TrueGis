@@ -11,7 +11,7 @@ const Home = () => {
     >
       <section className="flex max-lg:flex-col justify-between items-center">
         <article className="w-full flex flex-col max-lg:items-center gap-[24px]  items-start max-lg:text-center max-lg:w-2/3 max-sm:w-11/12">
-          <h1 className="text-[32px] font-[700] max-sm:text-[29px]">
+          <h1 className="text-[32px] font-[600] max-sm:text-[29px]">
             <span className="span">TrueGis:</span> sizga eng yaqin bo’lgan
             joylarni topish yanada oson va telegramning o’zida
           </h1>

@@ -56,7 +56,7 @@ const Features = () => {
       id="bot_features"
       className="features max-w-[1440px] w-10/12 max-lg:w-11/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px] max-sm:mb-0"
     >
-      <h1 className="text-[32px] font-[700] max-sm:text-[29px] sm:text-center">
+      <h1 className="text-[32px] font-[600] max-sm:text-[29px] sm:text-center">
         Biznesingizni rivojlantirish uchun
         <br className="max-sm:hidden" />
         botimiz xizmatlari
@@ -189,7 +189,7 @@ const Features = () => {
         </article>
       </section>
       <section className="w-full flex flex-col justify-center items-center pt-[100px] max-sm:pt-0">
-        <h1 className="text-[32px] max-sm:text-[29px] font-[700]">
+        <h1 className="text-[32px] max-sm:text-[29px] font-[600]">
           Biz qanday ishlaymiz?
         </h1>
         <article className=" w-[70%] max-xl:w-[80%] max-lg:w-[80%] max-sm:w-full flex flex-col  justify-center items-center gap-[5px] pt-[74px] mb-[50px]">

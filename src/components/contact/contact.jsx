@@ -38,7 +38,7 @@ const Contact = () => {
       id="contact"
       className="contact pt-[150px] max-w-[1440px] w-10/12 mx-auto flex flex-col items-center mb-[200px] max-sm:mb-[100px]"
     >
-      <h1 className="text-[32px] font-[700] max-sm:font-[500] max-sm:text-[29px] max-sm:text-center">
+      <h1 className="text-[32px] font-[600] max-sm:font-[500] max-sm:text-[29px] max-sm:text-center">
         Biz bilan bog’lanish
       </h1>
       <p className="text-[18px] font-[400] opacity-[0.7] pt-[16px] max-sm:text-center">

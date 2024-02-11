@@ -93,7 +93,7 @@ const Clients = () => {
       id="clients"
       className="clients  max-lg:w-11/12   mx-auto pt-[100px] flex flex-col items-center mb-[100px] overflow-hidden"
     >
-      <h1 className="text-[32px] font-[700]">Bizning mijozlarimiz</h1>
+      <h1 className="text-[32px] font-[600]">Bizning mijozlarimiz</h1>
       <div className="cards pt-[64px]">
         <div className="card-slide">
           {clients.map((item) => (
@@ -142,7 +142,7 @@ const Clients = () => {
         <div className="absolute top-10 lg:left-24 max-lg:top-[160px] max-sm:top-[600px]">
           <img className="w-[440px]" src={clientback} alt="back" />
         </div>
-        <h1 className="text-[32px] font-[700] text-center">
+        <h1 className="text-[32px] font-[600] text-center">
           Nima uchun bizni tanlashadi?
         </h1>
         <div className="card-container grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1  gap-[24px] max-sm:gap-[40px]">

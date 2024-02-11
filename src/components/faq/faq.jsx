@@ -12,7 +12,7 @@ const Faq = () => {
     >
       <div className="flex max-lg:flex-col mb-[100px]  max-lg:gap-[88px] max-sm:gap-[64px]">
         <article className="w-1/2 max-lg:w-full flex flex-col items-start gap-[16px]">
-          <h1 className="text-[32px] font-[700]">Ko’p beriladigan savollar</h1>
+          <h1 className="text-[32px] font-[600]">Ko’p beriladigan savollar</h1>
           <p className="text-[16px] font-[400] opacity-[0.7] w-[60%] max-sm:w-full">
             Qo’shimcha savollaringiz bormi?{" "}
             <a href="/" className="text-[#2051b6]">
@@ -33,7 +33,7 @@ const Faq = () => {
         </section>
       </div>
       <article className="w-full flex flex-col gap-[50px] justify-center items-center pt-[100px] max-sm:pt-0">
-        <h1 className="text-[32px] font-[700] text-center">
+        <h1 className="text-[32px] font-[600] text-center">
           Biz bilan ishlashga tayyormisiz?
         </h1>
         <a href="#contact" className="max-sm:w-full">
