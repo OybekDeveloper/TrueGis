@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./features.scss";
 import {
   featureicon,
@@ -9,13 +9,48 @@ import {
   phone3,
 } from "./features-img";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const Features = () => {
+  const [currentSection, setCurrentSection] = useState(0);
   const navigate = useNavigate();
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
   const sectionRef3 = useRef(null);
-  console.log(sectionRef1, sectionRef2, sectionRef3);
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const section1Top = sectionRef1.current.offsetTop - 200;
+    const section1Bottom = section1Top + sectionRef1.current.offsetHeight;
+    const section2Top = sectionRef2.current.offsetTop - 200;
+    const section2Bottom = section2Top + sectionRef2.current.offsetHeight;
+    const section3Top = sectionRef3.current.offsetTop - 200;
+    const section3Bottom = section3Top + sectionRef3.current.offsetHeight;
+
+    if (scrollPosition >= section3Top && scrollPosition <= section3Bottom) {
+      setCurrentSection(3);
+    } else if (
+      scrollPosition >= section2Top &&
+      scrollPosition <= section2Bottom
+    ) {
+      setCurrentSection(2);
+    } else if (
+      scrollPosition >= section1Top &&
+      scrollPosition <= section3Bottom
+    ) {
+      setCurrentSection(1);
+    } else {
+      setCurrentSection(0); // Set to 0 if above all sections
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  console.log(currentSection);
+
   return (
     <div
       id="bot_features"
@@ -48,7 +83,12 @@ const Features = () => {
             </p>
           </article>
           <div>
-            <img
+            <motion.img
+              transition={{ duration: 0.4 }}
+              animate={{
+                opacity: currentSection === 1 ? 1 : 0,
+                scale: currentSection === 1 ? 1 : 0,
+              }}
               className="w-[300px] max-md:w-[250px]"
               src={phone1}
               alt="icon"
@@ -74,7 +114,13 @@ const Features = () => {
             </p>
           </article>
           <div>
-            <img
+            <motion.img
+              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: currentSection === 2 ? 1 : 0,
+                scale: currentSection === 2 ? 1 : 0,
+              }}
               className="w-[300px] max-md:w-[250px]"
               src={phone2}
               alt="icon"
@@ -101,7 +147,13 @@ const Features = () => {
             </p>
           </article>
           <div>
-            <img
+            <motion.img
+              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: currentSection === 3 ? 1 : 0,
+                scale: currentSection === 3 ? 1 : 0,
+              }}
               className="w-[300px] max-md:w-[250px]"
               src={phone3}
               alt="icon"
