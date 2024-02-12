@@ -48,7 +48,7 @@ const Footer = () => {
                                 </li>
                                 <li className={activeLink === "faq" ? "active-link" : ""}>
                                     <a href="#faq" onClick={() => handleLinkClick("faq")}>
-                                        Ko’p beriladigan savollar
+                                        Koʻp beriladigan savollar
                                     </a>
                                 </li>
                             </ul>

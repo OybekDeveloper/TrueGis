@@ -73,7 +73,7 @@ const cards = [
   {
     id: 2,
     title:
-      "Har bir loyihani tizimli tashkillashtirish va so’ngi texnologiyalar bilan ishlab chiqish",
+      "Har bir loyihani tizimli tashkillashtirish va soʻnggi texnologiyalar yordamida ishlab chiqish",
     url: card2,
   },
   {
@@ -83,7 +83,7 @@ const cards = [
   },
   {
     id: 4,
-    title: "Har bitta loyihani alohida qo’llab quvvatlash",
+    title: "Har bitta loyihani alohida qoʻllab quvvatlash",
     url: card4,
   },
 ];

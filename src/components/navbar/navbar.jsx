@@ -73,7 +73,7 @@ const Navbar = () => {
           onClick={() => handleLinkClick("faq")}
           className={activeLink === "faq" ? "active-link" : ""}
         >
-          <a href="#faq">Ko’p beriladigan savollar</a>
+          <a href="#faq">Koʻp beriladigan savollar</a>
         </li>
       </ul>
       <a href="#contact ">
@@ -143,7 +143,7 @@ const Navbar = () => {
             onClick={() => handleLinkClick("faq")}
             className={activeLink === "faq" ? "active-link" : ""}
           >
-            <a href="#faq">Ko’p beriladigan savollar</a>
+            <a href="#faq">Koʻp beriladigan savollar</a>
           </li>
         </ul>
         <a href="#contact ">

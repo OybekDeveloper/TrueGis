@@ -59,7 +59,7 @@ const Features = () => {
       <h1 className="text-[32px] font-[600] max-sm:text-[29px] sm:text-center">
         Biznesingizni rivojlantirish uchun
         <br className="max-sm:hidden" />
-        botimiz xizmatlari
+        botimiz taklif qiladigan xizmatlar:
       </h1>
       <section className="pt-[100px] max-sm:pt-[64px] mb-[200px] max-sm:mb-[100px] flex flex-col gap-[120px] items-center justify-center">
         <div
@@ -70,16 +70,14 @@ const Features = () => {
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
             <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
               <span className="span">
-                Sizga kerak bo’ladigan joy ketegoriyalarining
+                Sizga kerak boʻladigan joy ketegoriyalarining
               </span>
               <br />
               <span className="span1"> hammasi bir joyda</span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Tez-tez qidiriladigan joylar kategoriyalar ya’ni bankomatlar,
-              ovqatlanish joylari, avtoservislar, dorixonalar, go’zallik
-              salonlari va boshqa kerakli joy manzillarini tezda va sizga eng
-              yaqin masofadagilarini toping
+              Tez-tez qidiriladigan joylar kategoriyalar ya’ni , sizga eng yaqin va qulay masofada joylashgan
+              kafe va restoranlar, bankomatla, avtoservislar, goʻzallik salonlari , dorixonalar va barcha kerakli manzillarni tezda topib beramiz
             </p>
           </article>
           <div>
@@ -103,14 +101,14 @@ const Features = () => {
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
             <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
               <span className="span1">
-                Har bir joy haqida sizga to’liq ma’lumot beradi
+                Har bir joy haqida sizga toʻliq ma’lumot beradi
               </span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Sizga eng yaqin joygacha bo’lgan masofani o’lchash, u joyning
+              Sizga eng yaqin joygacha boʻlgan masofani oʻlchash, u joyning
               ishlash vaqti va ayni vaqtda ochiq yoki yopiqligi haqida ma’lumot
-              beradi. Yana qo’shimcha aloqa raqamini va o’sha joygacha bo’lgan
-              yo’l haqini hisoblab beradi
+              beradi. Yana qoʻshimcha aloqa raqamini va oʻsha joygacha boʻlgan
+              yoʻl haqini hisoblab beradi
             </p>
           </article>
           <div>
@@ -135,15 +133,13 @@ const Features = () => {
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
             <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
               <span className="span">
-                Botning qo’shimcha xususiyatlari sizga ko’proq
+                Har bitta manzil haqida oʻz fikrlaringizni
               </span>
               <br />
-              <span className="span1"> qulayliklar yaratadi</span>
+              <span className="span1"> yozib qoldirishingiz mumkin</span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Bot orqali siz aviabiletlar haqida ma’lumotlar olishingiz va
-              ularga buyurtma berishingiz mumkin. Agar siz chet elda bo’lsangiz
-              terjimon xizmatidan ham foydalanishingiz mumkin
+              Foydalanuvchilar fikrlari manzil haqida toʻliqroq ma’lumot olishga va u joyga koʻproq foydalanuvchilar tashrif buyurishiga ijobiy ta’sir koʻrsatadi
             </p>
           </article>
           <div>
@@ -171,12 +167,12 @@ const Features = () => {
         </div>
         <article className="flex flex-col items-start gap-[16px] max-sm:gap-[24px] w-[60%] max-sm:w-full max-sm:text-center">
           <h1 className="text-[29px] max-lg:text-[26px] max-sm:text-[23px] font-[600]">
-            Biz bilan o’z biznesingizni yuqori <br className="max-sm:hidden" />{" "}
+            Biz bilan oʻz biznesingizni yuqori <br className="max-sm:hidden" />{" "}
             marralarga olib chiqing
           </h1>
           <p className="text-[16px] font-[400] opacity-[0.7]">
-            Agar sizga bizning xizmatlarimiz maqul kelgan bo’lsa darhol Xabar
-            qoldirish tugmasi orqali o’z ma’lumotlaringizni qoldiring
+            Agar sizga bizning xizmatlarimiz maqul kelgan boʻlsa darhol Xabar
+            qoldirish tugmasi orqali oʻz ma’lumotlaringizni qoldiring
           </p>
           <a href="#contact" className="pt-[20px] max-sm:w-full">
             <button
@@ -207,7 +203,7 @@ const Features = () => {
             <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
               <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] left-[-30px] text-right absolute w-1/2">
                 Kelishuvga binoan dasturiy mahsulotni ishlab chiqish va bot
-                xizmatlariga qo’shish
+                xizmatlariga qoʻshish
               </p>
               <img className="w-[16px] h-[16px]" src={howwe} alt="" />
               <div className="howwe-line"></div>
@@ -226,7 +222,7 @@ const Features = () => {
           <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
             <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
               <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] left-[-30px] text-right absolute w-1/2">
-                Keyinchalik ham dasturiy ta’minotni qo’llab quvvatlash va mijoz
+                Keyinchalik ham dasturiy ta’minotni qoʻllab quvvatlash va mijoz
                 bilan doimiy aloqa
               </p>
               <img className="w-[16px] h-[16px]" src={howwe} alt="" />
@@ -250,7 +246,7 @@ const Features = () => {
             </div>
             <p className="text-[20px] max-md:text-[18px] font-[500] w-[80%]">
               Kelishuvga binoan dasturiy mahsulotni ishlab chiqish va bot
-              xizmatlariga qo’shish
+              xizmatlariga qoʻshish
             </p>
           </div>
           <div className="flex sm:hidden">
@@ -268,7 +264,7 @@ const Features = () => {
               <img className="w-[16px] h-[16px] ml-[3px]" src={howwe} alt="" />
             </div>
             <p className="text-[20px] max-md:text-[18px] font-[500] w-[80%]">
-              Keyinchalik ham dasturiy ta’minotni qo’llab quvvatlash va mijoz
+              Keyinchalik ham dasturiy ta’minotni qoʻllab quvvatlash va mijoz
               bilan doimiy aloqa
             </p>
           </div>

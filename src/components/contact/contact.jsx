@@ -42,7 +42,7 @@ const Contact = () => {
         Biz bilan bog’lanish
       </h1>
       <p className="text-[18px] font-[400] opacity-[0.7] pt-[16px] max-sm:text-center">
-        O’z ma’lumotlaringizni qoldiring va biz siz bilan tez orada o’zimiz
+        oʻz ma’lumotlaringizni qoldiring va biz siz bilan tez orada oʻzimiz
         bog’lanamiz
       </p>
       <section className="flex max-lg:flex-col-reverse pt-[72px]  max-lg:gap-[96px] justify-between     w-full">

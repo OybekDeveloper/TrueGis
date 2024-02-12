@@ -12,9 +12,9 @@ const Faq = () => {
     >
       <div className="flex max-lg:flex-col mb-[100px]  max-lg:gap-[88px] max-sm:gap-[64px]">
         <article className="w-1/2 max-lg:w-full flex flex-col items-start gap-[16px]">
-          <h1 className="text-[32px] font-[600]">Ko’p beriladigan savollar</h1>
+          <h1 className="text-[32px] font-[600]">Koʻp beriladigan savollar</h1>
           <p className="text-[16px] font-[400] opacity-[0.7] w-[60%] max-sm:w-full">
-            Qo’shimcha savollaringiz bormi?{" "}
+            Qoʻshimcha savollaringiz bormi?{" "}
             <a href="/" className="text-[#2051b6]">
               @truegis_bot
             </a>{" "}
