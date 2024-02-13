@@ -180,6 +180,7 @@ const Features = () => {
                 onClick={() => navigate("/contact")}
                 className="msg-btn flex max-sm:w-full"
               >
+                Xabar qoldirish
               </button>
             </div>
           </a>

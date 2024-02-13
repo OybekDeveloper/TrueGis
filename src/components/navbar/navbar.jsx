@@ -82,6 +82,7 @@ const Navbar = () => {
             onClick={() => { navigate("/contact"); setActiveLink("") }}
             className="msg-btn flex max-lg:hidden"
           >
+            Xabar qoldirish
           </button>
         </div>
       </a>
@@ -96,6 +97,7 @@ const Navbar = () => {
               }}
               className="msg-btn flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
             >
+              Xabar qoldirish
             </button>
           </div>
         </a>

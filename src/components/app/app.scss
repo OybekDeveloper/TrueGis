@@ -25,77 +25,176 @@
       filter: blur(0) !important;
     }
   }
+  // .msg-btn {
+  //   border: none;
+  //   padding: 5px 20px;
+  //   border-radius: 1px;
+  //   background: rgb(91, 93, 208);
+  //   position: relative;
+  //   overflow: hidden;
+  //   color: white;
+  //   &:before {
+  //     content: "";
+  //     width: 100px;
+  //     position: absolute;
+  //     height: 100%;
+  //     background-image: linear-gradient(
+  //       120deg,
+  //       rgba(255, 255, 255, 0) 30%,
+  //       rgba(255, 255, 255, 0.8),
+  //       rgba(255, 255, 255, 0) 70%
+  //     );
+  //     top: 0;
+  //     left: -100px;
+  //     animation: animate 3s linear infinite;
+  //   }
+  // }
 
-  .shimmer-btn {
-    font-weight: 500;
-    border-radius: 20px;
-    --ofset: 1px;
+  // @keyframes animate {
+  //   0% {
+  //     left: -100px;
+  //   }
+  //   20% {
+  //     left: 100%;
+  //   }
+  //   100% {
+  //     left: 100%;
+  //   }
+  // }
+  .msg-btn {
     position: relative;
-    max-width: 100%;
+    padding: 6px 12px;
+    font-weight: 500;
     overflow: hidden;
-    ::before {
+    border-radius: 6px;
+    border: 1px solid #a2c1ff;
+    background-image: linear-gradient(
+      to left,
+      #2970ff,
+      #7aa6ff,
+      #7aa6ff,
+      #2970ff
+    );
+    background-size: 300%;
+    background-position: right;
+    box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
+    transition: 300ms background-position ease-in-out, 300ms border ease-in-out;
+    &:before {
       content: "";
-      background: conic-gradient(transparent 180deg, white, transparent);
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      aspect-ratio: 1;
-      width: 100%;
-      animation: rotate 2s linear infinite;
-    }
-    ::after {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      content: "Xabar qoldirish";
-      background: inherit;
-      border-radius: inherit;
-      position: absolute;
-      inset: var(--ofset);
-      height: calc(100% - 2 * var(--ofset));
-      width: calc(100% - 2 * var(--ofset));
-    }
-    .msg-btn {
-      position: absolute;
-      inset: 0;
-      z-index: 10;
-      padding: 10px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      border-radius: 20px;
-      border: 1px solid #a2c1ff;
+      z-index: 100;
+      width: 100px;
+      height: 100%;
       background-image: linear-gradient(
-        to left,
-        #2970ff,
-        #7aa6ff,
-        #7aa6ff,
-        #2970ff
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 8),
+        rgba(255, 255, 255, 0) 70%
       );
-      background-size: 300%;
-      background-position: right;
-      box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
-      transition: 300ms background-position ease-in-out,
-        300ms border ease-in-out;
-      &:hover {
-        border: 1px solid #2059cc;
-        background-position: left;
-        box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
-      }
-      &:focus {
-        border: 1px solid #a2c1ff;
-        background: #2970ff !important;
-        box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
-      }
+      top: 0;
+      left: -100px;
+      animation: animate 2.5s linear infinite;
     }
-    @keyframes rotate {
-      from {
-        transform: translate(-50%, -50%) scale(1.2) rotate(0turn);
+    &:hover:before {
+      animation: pause;
+    }
+    &:focus:before {
+      animation: pause;
+    }
+    &:hover {
+      border: 1px solid #2059cc;
+      background-position: left;
+      box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
+    }
+    &:focus {
+      border: 1px solid #a2c1ff;
+      background: #2970ff !important;
+      box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
+    }
+
+    @keyframes animate {
+      0% {
+        left: -100px;
       }
-      to {
-        transform: translate(-50%, -50%) scale(1.2) rotate(1turn);
+      20% {
+        left: 100%;
+      }
+      100% {
+        left: 100%;
       }
     }
   }
+  // .shimmer-btn {
+  //   font-weight: 500;
+  //   border-radius: 6px;
+  //   --ofset: 0.5px;
+  //   position: relative;
+  //   max-width: 100%;
+  //   overflow: hidden;
+  //   ::before {
+  //     content: "";
+  //     background: conic-gradient(transparent 180deg, white, transparent);
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //     aspect-ratio: 1;
+  //     width: 100%;
+  //     animation: rotate 2s linear infinite;
+  //   }
+  //   ::after {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     content: "Xabar qoldirish";
+  //     background: inherit;
+  //     border-radius: inherit;
+  //     position: absolute;
+  //     inset: var(--ofset);
+  //     height: calc(100% - 2 * var(--ofset));
+  //     width: calc(100% - 2 * var(--ofset));
+  //   }
+  //   .msg-btn {
+  //     position: absolute;
+  //     inset: 0;
+  //     z-index: 10;
+  //     padding: 10px 20px;
+  //     font-weight: 700;
+  //     justify-content: center;
+  //     align-items: center;
+  //     gap: 10px;
+  //     border-radius: 6px;
+  //     border: 1px solid #a2c1ff;
+  //     background-image: linear-gradient(
+  //       to left,
+  //       #2970ff,
+  //       #7aa6ff,
+  //       #7aa6ff,
+  //       #2970ff
+  //     );
+  //     background-size: 300%;
+  //     background-position: right;
+  //     box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
+  //     transition: 300ms background-position ease-in-out,
+  //       300ms border ease-in-out;
+  //     &:hover {
+  //       border: 1px solid #2059cc;
+  //       background-position: left;
+  //       box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
+  //     }
+  //     &:focus {
+  //       border: 1px solid #a2c1ff;
+  //       background: #2970ff !important;
+  //       box-shadow: 0px -60px 32px 0px rgba(171, 132, 244, 0.3) inset;
+  //     }
+  //   }
+  //   @keyframes rotate {
+  //     from {
+  //       transform: translate(-50%, -50%) scale(1.2) rotate(0turn);
+  //     }
+  //     to {
+  //       transform: translate(-50%, -50%) scale(1.2) rotate(1turn);
+  //     }
+  //   }
+  // }
 }

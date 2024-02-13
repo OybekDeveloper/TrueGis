@@ -23,6 +23,7 @@ const Faq = () => {
           <a href="/" className="max-sm:hidden mt-[20px]">
             <div className="shimmer-btn2 w-[200px] h-[42px]">
               <button className="msg-btn  flex">
+                Telegramdan yozish
               </button>
             </div>
           </a>

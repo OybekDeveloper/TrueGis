@@ -25,6 +25,7 @@ const Home = () => {
                 onClick={() => navigate("/contact")}
                 className="msg-btn flex"
               >
+                Xabar qoldirish
               </button>
             </div>
           </a>
