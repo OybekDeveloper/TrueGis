@@ -61,7 +61,7 @@ const Features = () => {
         <br className="max-sm:hidden" />
         botimiz taklif qiladigan xizmatlar:
       </h1>
-      <section className="pt-[100px] max-sm:pt-[64px] mb-[200px] max-sm:mb-[100px] flex flex-col gap-[120px] items-center justify-center">
+      <section className="pt-[100px] max-sm:pt-[64px] mb-[200px] max-sm:mb-[100px] flex flex-col  items-center justify-center">
         <div
           ref={sectionRef1}
           className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center "
@@ -91,7 +91,7 @@ const Features = () => {
             className="relative bankomat"
           >
             <a href="#sectionref2">
-              <button className="flex absolute msg-btn1 top-[382px] left-[35px] h-[25px] w-[113px] max-md:top-[318px] max-md:w-[93px] max-md:left-[30px] max-md:h-[20px] max-md:text-[10px] text-[10px] max-sm:text-[9px]">
+              <button className="flex msg-btn1 absolute top-[382px] left-[35px] h-[25px] w-[113px] max-md:top-[318px] max-md:w-[93px] max-md:left-[30px] max-md:h-[20px] max-md:text-[10px] text-[10px] max-sm:text-[9px]">
                 Bankomatlar
               </button>
             </a>
@@ -121,23 +121,31 @@ const Features = () => {
               yoʻl haqini hisoblab beradi
             </p>
           </article>
-          <div>
-            <motion.img
-              transition={{ duration: 0.4 }}
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: currentSection === 2 ? 1 : 0,
-                scale: currentSection === 2 ? 1 : 0,
-              }}
+          <motion.div
+            className="relative"
+            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: currentSection === 2 ? 1 : 0,
+              scale: currentSection === 2 ? 1 : 0,
+            }}
+          >
+            <a href="#sectionref3">
+              <button className="flex msg-btn2 top-[380px] w-[173px] h-[25px] left-[38px] max-md:top-[316px] max-md:w-[146px] max-md:h-[21px] max-md:left-[30px]">
+                Ma'lumot olish
+              </button>
+            </a>
+            <img
               className="w-[300px] max-md:w-[250px]"
               src={phone2}
               alt="icon"
             />
-          </div>
+          </motion.div>
         </div>
         <div
+          id="sectionref3"
           ref={sectionRef3}
-          className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center "
+          className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center pt-[100px]"
         >
           <article className="w-1/2 max-sm:w-full flex flex-col gap-[32px]">
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
@@ -154,19 +162,26 @@ const Features = () => {
               ta’sir koʻrsatadi
             </p>
           </article>
-          <div>
-            <motion.img
-              transition={{ duration: 0.4 }}
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: currentSection === 3 ? 1 : 0,
-                scale: currentSection === 3 ? 1 : 0,
-              }}
+          <motion.div
+            className="relative"
+            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: currentSection === 3 ? 1 : 0,
+              scale: currentSection === 3 ? 1 : 0,
+            }}
+          >
+            <a href="#contact">
+              <button onClick={() => navigate('/contact')} className="flex msg-btn3 top-[518px] w-[210px] h-[30px] left-[45px] max-md:top-[432px] max-md:w-[172px] max-md:h-[25px] max-md:left-[39px]">
+                Sharh qoldirish
+              </button>
+            </a>
+            <img
               className="w-[300px] max-md:w-[250px]"
               src={phone3}
               alt="icon"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="w-full flex flex-row max-sm:flex-col justify-between feature-card-true p-[48px] max-md:p-[28px] mb-[100px]">
