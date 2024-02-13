@@ -91,7 +91,7 @@ const Features = () => {
             className="relative bankomat"
           >
             <a href="#sectionref2">
-              <button className="flex absolute msg-btn1 top-[382px] left-[35px] h-[25px] w-[113px] max-md:top-[318px] max-md:w-[93px] max-md:left-[30px] max-md:h-[20px] max-md:text-[10px]">
+              <button className="flex absolute msg-btn1 top-[382px] left-[35px] h-[25px] w-[113px] max-md:top-[318px] max-md:w-[93px] max-md:left-[30px] max-md:h-[20px] max-md:text-[10px] text-[10px] max-sm:text-[9px]">
                 Bankomatlar
               </button>
             </a>

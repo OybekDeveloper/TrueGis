@@ -35,8 +35,7 @@ const Home = () => {
           </div>
           <div className="relative">
             <a href="#bot_features">
-              {" "}
-              <button className="flex msg-btn top-[570px] w-[88%] h-[35px] left-[18px] max-sm:top-[515px]">
+              <button className="flex msg-btn1 top-[570px] w-[85%] h-[30px] sm:h-[34px] sm:left-[23px] left-[20px] max-sm:top-[513px]">
                 Start
               </button>
             </a>

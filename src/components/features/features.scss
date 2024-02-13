@@ -21,10 +21,8 @@
       align-items: center;
       padding: 6px 12px;
       font-weight: 400;
-      font-size: 12px;
       overflow: hidden;
       border-radius: 4px;
-      letter-spacing: 1px;
       background-color: #504555;
       background-size: 300%;
       background-position: right;
@@ -43,7 +41,7 @@
         );
         top: 0;
         left: -150px;
-        animation: animate 2.5s linear infinite;
+        animation: animate 4s linear infinite;
       }
       &:hover:before {
         animation: pause;
