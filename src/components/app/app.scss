@@ -27,12 +27,12 @@
   }
 
   .shimmer-btn {
-    border-radius: 6px;
-    --ofset: 0.5px;
+    font-weight: 500;
+    border-radius: 20px;
+    --ofset: 1px;
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    font-weight: 6 00;
     ::before {
       content: "";
       background: conic-gradient(transparent 180deg, white, transparent);
@@ -61,11 +61,10 @@
       inset: 0;
       z-index: 10;
       padding: 10px 20px;
-      font-weight: 700;
       justify-content: center;
       align-items: center;
       gap: 10px;
-      border-radius: 6px;
+      border-radius: 20px;
       border: 1px solid #a2c1ff;
       background-image: linear-gradient(
         to left,

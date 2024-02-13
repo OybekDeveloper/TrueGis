@@ -28,12 +28,12 @@
     }
   }
   .shimmer-btn2 {
+    font-weight: 500;
     border-radius: 6px;
     --ofset: 0.5px;
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    font-weight: 6 00;
     ::before {
       content: "";
       background: conic-gradient(transparent 180deg, white, transparent);
@@ -49,7 +49,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      content: "Telegramdan yozish";
+      content: "Telegramdan";
       background: inherit;
       border-radius: inherit;
       position: absolute;
@@ -62,7 +62,6 @@
       inset: 0;
       z-index: 10;
       padding: 10px 20px;
-      font-weight: 700;
       justify-content: center;
       align-items: center;
       gap: 10px;
