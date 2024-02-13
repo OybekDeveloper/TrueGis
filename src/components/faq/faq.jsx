@@ -20,10 +20,11 @@ const Faq = () => {
             </a>{" "}
             manziliga telegram orqali bog’laning
           </p>
-          <a href="/" className="max-sm:hidden">
-            <button className="msg-btn mt-[20px] flex">
-              Telegramdan yozish
-            </button>
+          <a href="/" className="max-sm:hidden mt-[20px]">
+            <div className="shimmer-btn2 w-[200px] h-[42px]">
+              <button className="msg-btn  flex">
+              </button>
+            </div>
           </a>
         </article>
         <section className="w-1/2 max-lg:w-full">
@@ -37,12 +38,14 @@ const Faq = () => {
           Biz bilan ishlashga tayyormisiz?
         </h1>
         <a href="#contact" className="max-sm:w-full">
-          <button
-            onClick={() => navigate("/contact")}
-            className="msg-btn w-full"
-          >
-            Xabar qoldirish
-          </button>
+          <div className="shimmer-btn w-[200px] h-[40px] max-sm:w-full max-sm:h-[46px]">
+            <button
+              onClick={() => navigate("/contact")}
+              className="msg-btn w-full"
+            >
+              Xabar qoldirish
+            </button>
+          </div>
         </a>
       </article>
     </div>

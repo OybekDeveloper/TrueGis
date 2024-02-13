@@ -76,26 +76,28 @@ const Navbar = () => {
           <a href="#faq">Koʻp beriladigan savollar</a>
         </li>
       </ul>
-      <a href="#contact ">
-        <button
-          onClick={() => { navigate("/contact"); setActiveLink("") }}
-          className="msg-btn flex max-lg:hidden"
-        >
-          Xabar qoldirish
-        </button>
+      <a href="#contact">
+        <div className="shimmer-btn w-[140px] h-[40px]">
+          <button
+            onClick={() => { navigate("/contact"); setActiveLink("") }}
+            className="msg-btn flex max-lg:hidden"
+          >
+          </button>
+        </div>
       </a>
       <div className="menu lg:hidden flex justify-center items-center gap-[18px]">
         <a href="#contact">
-          <button
-            onClick={() => {
-              navigate("/contact");
-              setIsOpen(false);
-              setActiveLink('')
-            }}
-            className="msg-btn flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
-          >
-            Xabar qoldirish
-          </button>
+          <div className="shimmer-btn w-[120px] h-[32px]">
+            <button
+              onClick={() => {
+                navigate("/contact");
+                setIsOpen(false);
+                setActiveLink('')
+              }}
+              className="msg-btn flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
+            >
+            </button>
+          </div>
         </a>
 
         <img

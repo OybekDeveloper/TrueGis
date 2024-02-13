@@ -20,12 +20,13 @@ const Home = () => {
             manzillarini bir zumda toping
           </p>
           <a href="#contact" className="pt-[20px] max-sm:w-full">
-            <button
-              onClick={() => navigate("/contact")}
-              className="msg-btn flex max-sm:w-full"
-            >
-              Xabar qoldirish
-            </button>
+            <div className="shimmer-btn w-[144px] h-[42px] max-lg:w-[228px] max-sm:w-full max-sm:h-[46px]">
+              <button
+                onClick={() => navigate("/contact")}
+                className="msg-btn flex"
+              >
+              </button>
+            </div>
           </a>
         </article>
         <div className="relative w-full flex justify-center items-center max-lg:pt-[104px]">

@@ -36,7 +36,7 @@ const Features = () => {
       setCurrentSection(2);
     } else if (
       scrollPosition >= section1Top &&
-      scrollPosition <= section3Bottom
+      scrollPosition <= section1Bottom
     ) {
       setCurrentSection(1);
     } else {
@@ -175,12 +175,13 @@ const Features = () => {
             qoldirish tugmasi orqali oʻz ma’lumotlaringizni qoldiring
           </p>
           <a href="#contact" className="pt-[20px] max-sm:w-full">
-            <button
-              onClick={() => navigate("/contact")}
-              className="msg-btn flex max-sm:w-full"
-            >
-              Xabar qoldirish
-            </button>
+            <div className="shimmer-btn w-[144px] h-[42px] max-sm:w-full max-sm:h-[46px]">
+              <button
+                onClick={() => navigate("/contact")}
+                className="msg-btn flex max-sm:w-full"
+              >
+              </button>
+            </div>
           </a>
         </article>
       </section>
