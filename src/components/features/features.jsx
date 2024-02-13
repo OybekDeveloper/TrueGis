@@ -20,7 +20,7 @@ const Features = () => {
   const sectionRef3 = useRef(null);
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const section1Top = sectionRef1.current.offsetTop - 200;
+    const section1Top = sectionRef1.current.offsetTop - 300;
     const section1Bottom = section1Top + sectionRef1.current.offsetHeight;
     const section2Top = sectionRef2.current.offsetTop - 200;
     const section2Bottom = section2Top + sectionRef2.current.offsetHeight;
@@ -76,26 +76,36 @@ const Features = () => {
               <span className="span1"> hammasi bir joyda</span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Tez-tez qidiriladigan joylar kategoriyalar ya’ni , sizga eng yaqin va qulay masofada joylashgan
-              kafe va restoranlar, bankomatla, avtoservislar, goʻzallik salonlari , dorixonalar va barcha kerakli manzillarni tezda topib beramiz
+              Tez-tez qidiriladigan joylar kategoriyalar ya’ni , sizga eng yaqin
+              va qulay masofada joylashgan kafe va restoranlar, bankomatla,
+              avtoservislar, goʻzallik salonlari , dorixonalar va barcha kerakli
+              manzillarni tezda topib beramiz
             </p>
           </article>
-          <div>
-            <motion.img
-              transition={{ duration: 0.4 }}
-              animate={{
-                opacity: currentSection === 1 ? 1 : 0,
-                scale: currentSection === 1 ? 1 : 0,
-              }}
+          <motion.div
+            transition={{ duration: 0.4 }}
+            animate={{
+              opacity: currentSection === 1 ? 1 : 0,
+              scale: currentSection === 1 ? 1 : 0,
+            }}
+            className="relative bankomat"
+          >
+            <a href="#sectionref2">
+              <button className="flex absolute msg-btn1 top-[382px] left-[35px] h-[25px] w-[113px] max-md:top-[318px] max-md:w-[93px] max-md:left-[30px] max-md:h-[20px]">
+                Bankomatlar
+              </button>
+            </a>
+            <img
               className="w-[300px] max-md:w-[250px]"
               src={phone1}
               alt="icon"
             />
-          </div>
+          </motion.div>
         </div>
         <div
+          id="sectionref2"
           ref={sectionRef2}
-          className="flex max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center "
+          className="flex pt-[100px] max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center "
         >
           <article className="w-1/2 max-sm:w-full flex flex-col gap-[32px]">
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
@@ -139,7 +149,9 @@ const Features = () => {
               <span className="span1"> yozib qoldirishingiz mumkin</span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Foydalanuvchilar fikrlari manzil haqida toʻliqroq ma’lumot olishga va u joyga koʻproq foydalanuvchilar tashrif buyurishiga ijobiy ta’sir koʻrsatadi
+              Foydalanuvchilar fikrlari manzil haqida toʻliqroq ma’lumot olishga
+              va u joyga koʻproq foydalanuvchilar tashrif buyurishiga ijobiy
+              ta’sir koʻrsatadi
             </p>
           </article>
           <div>

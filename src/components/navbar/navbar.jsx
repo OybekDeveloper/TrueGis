@@ -77,42 +77,38 @@ const Navbar = () => {
         </li>
       </ul>
       <a href="#contact">
-        <div className="shimmer-btn w-[140px] h-[40px]">
-          <button
-            onClick={() => { navigate("/contact"); setActiveLink("") }}
-            className="msg-btn flex max-lg:hidden"
-          >
-            Xabar qoldirish
-          </button>
-        </div>
+        <button
+          onClick={() => { navigate("/contact"); setActiveLink("") }}
+          className="msg-btn flex max-lg:hidden "
+        >
+          Xabar qoldirish
+        </button>
       </a>
       <div className="menu lg:hidden flex justify-center items-center gap-[18px]">
         <a href="#contact">
-          <div className="shimmer-btn w-[120px] h-[32px]">
-            <button
-              onClick={() => {
-                navigate("/contact");
-                setIsOpen(false);
-                setActiveLink('')
-              }}
-              className="msg-btn flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
-            >
-              Xabar qoldirish
-            </button>
-          </div>
+          <button
+            onClick={() => {
+              navigate("/contact");
+              setIsOpen(false);
+              setActiveLink('')
+            }}
+            className="msg-btn max-sm:h-[30px] flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
+          >
+            Xabar qoldirish
+          </button>
         </a>
 
         <img
           onClick={handleActive}
           className={`${isOpen ? "hidden" : "block"
-            } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
+            } w-[28px] h-[28px] max-sm:w-[24px] max-sm:h-[24px]`}
           src={menu}
           alt="menu"
         />
         <img
           onClick={handleActive}
           className={`${isOpen ? "block" : "hidden"
-            } w-[28px] h-[28px] max-sm:w-[18px] max-sm:h-[18px]`}
+            } w-[28px] h-[28px] max-sm:w-[24px] max-sm:h-[24px]`}
           src={close}
           alt="menu"
         />
