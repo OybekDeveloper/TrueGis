@@ -2,6 +2,7 @@ import React from "react";
 import { homeimg, homebackimg } from "../imgs";
 import { useNavigate } from "react-router-dom";
 import "./home.scss";
+
 const Home = () => {
   const navigate = useNavigate();
   return (

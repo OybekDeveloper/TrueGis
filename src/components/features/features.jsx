@@ -8,13 +8,17 @@ import {
   phone2,
   phone3,
 } from "./features-img";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 const Features = () => {
   const [currentSection, setCurrentSection] = useState(0);
   const navigate = useNavigate();
+  const imgSectionRef1 = useRef(null);
+  const imgSectionRef2 = useRef(null);
+  const imgSectionRef3 = useRef(null);
+
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
   const sectionRef3 = useRef(null);
@@ -48,6 +52,15 @@ const Features = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (sectionRef) => {
+    if (sectionRef.current) {
+      window.scrollTo({
+        top: sectionRef.current.offsetTop - 100,
+        behavior: "smooth",
+      });
+    }
+  };
 
   console.log(currentSection);
 
@@ -83,6 +96,8 @@ const Features = () => {
             </p>
           </article>
           <motion.div
+            id="sectionRef1"
+            ref={imgSectionRef1}
             transition={{ duration: 0.4 }}
             animate={{
               opacity: currentSection === 1 ? 1 : 0,
@@ -90,11 +105,11 @@ const Features = () => {
             }}
             className="relative bankomat"
           >
-            <a href="#sectionref2">
+            <Link onClick={() => scrollToSection(imgSectionRef2)}>
               <button className="flex msg-btn1 absolute top-[382px] left-[35px] h-[25px] w-[113px] max-md:top-[318px] max-md:w-[93px] max-md:left-[30px] max-md:h-[20px] max-md:text-[10px] text-[10px] max-sm:text-[9px]">
                 Bankomatlar
               </button>
-            </a>
+            </Link>
             <img
               className="w-[300px] max-md:w-[250px]"
               src={phone1}
@@ -103,7 +118,7 @@ const Features = () => {
           </motion.div>
         </div>
         <div
-          id="sectionref2"
+
           ref={sectionRef2}
           className="flex pt-[100px] max-sm:flex-col max-sm:justify-center max-sm:items-center justify-around max-lg:justify-between items-center "
         >
@@ -122,6 +137,7 @@ const Features = () => {
             </p>
           </article>
           <motion.div
+            ref={imgSectionRef2}
             className="relative"
             transition={{ duration: 0.4 }}
             initial={{ opacity: 0 }}
@@ -130,11 +146,11 @@ const Features = () => {
               scale: currentSection === 2 ? 1 : 0,
             }}
           >
-            <a href="#sectionref3">
+            <Link onClick={() => scrollToSection(imgSectionRef3)}>
               <button className="flex msg-btn2 top-[380px] w-[173px] h-[25px] left-[38px] max-md:top-[316px] max-md:w-[146px] max-md:h-[21px] max-md:left-[30px]">
                 Ma'lumot olish
               </button>
-            </a>
+            </Link>
             <img
               className="w-[300px] max-md:w-[250px]"
               src={phone2}
@@ -163,6 +179,7 @@ const Features = () => {
             </p>
           </article>
           <motion.div
+            ref={imgSectionRef3}
             className="relative"
             transition={{ duration: 0.4 }}
             initial={{ opacity: 0 }}
