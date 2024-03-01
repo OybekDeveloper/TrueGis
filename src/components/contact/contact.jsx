@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { dog, loc, phone } from "./contact-img";
 import "./contact.scss";
+import axios from "axios";
+import { useTranslation } from "react-i18next";
+import { Bounce, toast } from "react-toastify";
 
 const Contact = () => {
+  const { t } = useTranslation()
+  useEffect(() => {
+    const scrollPage = (targetId) => {
+      const targetElement = document.getElementById(targetId);
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    scrollPage('contact')
+  }, [])
   const [formData, setFormData] = useState({
-    username: "",
+    full_name: "",
     phone: "",
-    massage: "",
+    message: "",
+    status: true
   });
+  const [errorMessage, setErrorMessage] = useState()
   const handleInputChange = (e) => {
-    const inputValue = e.target.value.replace(/[^0-9]/g, "");
+    const inputValue = e.target.value.replace(/[^0-9+]/g, "");
     e.target.value = inputValue;
     const { name, value } = e.target;
     setFormData({
@@ -26,12 +42,45 @@ const Contact = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    setFormData({
-      username: "",
-      phone: "",
-      massage: "",
-    });
+    const fetchData = async () => {
+      try {
+        const dataF = JSON.stringify(formData)
+        const res = await axios({
+          method: "POST",
+          url: "https://admin13.uz/api/message/",
+          headers: {
+            accept: "application/json",
+            "Content-Type": "application/json",
+            "X-CSRFToken":
+              "fbNVA9GldYIriuoEzoY2wJ8adX8zZMTNdsppRlilMledGfp6dw1K9dfQbsyn9UAG",
+          },
+          data: dataF
+        });
+        toast.success(t("success_msg"), {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
+        setFormData({
+          full_name: "",
+          phone: "",
+          message: "",
+          status: true
+        })
+        setErrorMessage(null)
+        console.log(res)
+      } catch (err) {
+        console.log(err?.response?.data, 'err')
+        setErrorMessage(err?.response?.data);
+      }
+    };
+    fetchData();
   };
   return (
     <div
@@ -39,15 +88,14 @@ const Contact = () => {
       className="contact pt-[150px] max-w-[1440px] w-10/12 mx-auto flex flex-col items-center mb-[200px] max-sm:mb-[100px]"
     >
       <h1 className="text-[32px] font-[600] max-sm:font-[500] max-sm:text-[29px] max-sm:text-center">
-        Biz bilan bog’lanish
+        {t("contact")}
       </h1>
       <p className="text-[18px] font-[400] opacity-[0.7] pt-[16px] max-sm:text-center">
-        oʻz ma’lumotlaringizni qoldiring va biz siz bilan tez orada oʻzimiz
-        bog’lanamiz
+        {t('contact_p')}
       </p>
       <section className="flex max-lg:flex-col-reverse pt-[72px]  max-lg:gap-[96px] justify-between     w-full">
         <div className="contact-me flex flex-col gap-[40px] w-[310px]">
-          <h1 className="text-[23px] font-[500]">Aloqa ma’lumotlari</h1>
+          <h1 className="text-[23px] font-[500]">{t("connect_text")}</h1>
           <div className="flex justify-start items-center gap-[12px]">
             <img src={phone} alt="phone" />
             <p>+998 (88) 100 36 31</p>
@@ -58,26 +106,26 @@ const Contact = () => {
           </div>
           <div className="flex justify-start items-center gap-[12px]">
             <img src={loc} alt="phone" />
-            <p>3891 Ranchview Dr. Richardson, California 62639</p>
+            <p>Chulpon MFI, Pakhlavon Mahmud ul, 2 proezd,</p>
           </div>
         </div>
         <div className="contact-you w-1/2 max-lg:w-full">
           <form className="contact-form flex flex-col items-center max-lg:items-start gap-[42px]">
-            <div className="w-[70%] max-lg:w-full">
-              <label htmlFor="text"></label>
+            <div className="w-[70%] max-lg:w-full flex flex-col gap-2">
+              <label className="text-[red]" htmlFor="text">{errorMessage?.full_name && t("error_msg")}</label>
               <input
-                className="contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form"
+                className={`${errorMessage?.full_name ? " border-red-400" : "border-[#fdfdfd4d]"} border-[1px] border-solid contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form`}
                 type="text"
-                placeholder="Familiya , Ism"
-                name="username"
-                value={formData.username}
+                placeholder={t("input_1")}
+                name="full_name"
+                value={formData.full_name}
                 onChange={handleChange}
               />
             </div>
-            <div className="w-[70%] max-lg:w-full">
-              <label htmlFor="text"></label>
+            <div className="w-[70%] max-lg:w-full flex flex-col gap-2">
+              <label className="text-[red]" htmlFor="text">{errorMessage?.phone && t("error_msg")}</label>
               <input
-                className="contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form"
+                className={`${errorMessage?.phone ? "border-red-400" : "border-[#fdfdfd4d]"} border-[1px] border-solid contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form`}
                 type="text"
                 value={formData.phone}
                 placeholder="+998 (88) 123 45 67"
@@ -85,17 +133,17 @@ const Contact = () => {
                 onChange={handleInputChange} // Add onChange event
               />
             </div>
-            <div className="w-[70%] max-lg:w-full">
+            <div className="w-[70%] max-lg:w-full flex flex-col gap-2">
               <div className="">
-                <label htmlFor="message"></label>
+                <label className="text-[red]" htmlFor="message">{errorMessage?.message && t("error_msg")}</label>
                 <textarea
-                  name="massage"
-                  value={formData.massage}
+                  name="message"
+                  value={formData.message}
                   onChange={handleChange}
                   id="message"
                   rows="4"
-                  className="contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form"
-                  placeholder="Xabaringizni yozing"
+                  className={`${errorMessage?.message ? "border-red-400" : "border-[#fdfdfd4d]"} border-[1px] border-solid contact-input  input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form`}
+                  placeholder={t("input_2")}
                 ></textarea>
               </div>
             </div>
@@ -104,7 +152,7 @@ const Contact = () => {
               type="submit"
               className="msg-btn flex w-[70%] max-lg:w-full"
             >
-              Yuborish
+              {t("send_form")}
             </button>
           </form>
         </div>

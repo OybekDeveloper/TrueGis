@@ -12,6 +12,9 @@ import {
   clientback,
 } from "./client-img";
 import "./clients.scss";
+import { useTranslation } from "react-i18next";
+
+
 const clients = [
   {
     id: 1,
@@ -64,36 +67,37 @@ const clients = [
     url: Starbucks,
   },
 ];
-const cards = [
-  {
-    id: 1,
-    title: "Loyihani qabul qilib olish jarayonida aniq kelishuv",
-    url: card1,
-  },
-  {
-    id: 2,
-    title:
-      "Har bir loyihani tizimli tashkillashtirish va soʻnggi texnologiyalar yordamida ishlab chiqish",
-    url: card2,
-  },
-  {
-    id: 3,
-    title: "Qabul qilib olingan loyihalarni kelishilgan vaqtda yetkazib berish",
-    url: card3,
-  },
-  {
-    id: 4,
-    title: "Har bitta loyihani alohida qoʻllab quvvatlash",
-    url: card4,
-  },
-];
+
 const Clients = () => {
+  const { t } = useTranslation()
+  const cards = [
+    {
+      id: 1,
+      title: t('what_1'),
+      url: card1,
+    },
+    {
+      id: 2,
+      title: t("what_2"),
+      url: card2,
+    },
+    {
+      id: 3,
+      title: t("what_3"),
+      url: card3,
+    },
+    {
+      id: 4,
+      title: t("what_4"),
+      url: card4,
+    },
+  ];
   return (
     <div
       id="clients"
       className="clients  max-lg:w-11/12   mx-auto pt-[100px] flex flex-col items-center mb-[100px] overflow-hidden"
     >
-      <h1 className="text-[32px] font-[600]">Bizning mijozlarimiz</h1>
+      <h1 className="text-[32px] font-[600]">{t("our_clients")}</h1>
       <div className="cards pt-[64px]">
         <div className="card-slide">
           {clients.map((item) => (
@@ -143,7 +147,7 @@ const Clients = () => {
           <img className="w-[440px]" src={clientback} alt="back" />
         </div>
         <h1 className="text-[32px] font-[600] text-center">
-          Nima uchun bizni tanlashadi?
+          {t("what_clients")}
         </h1>
         <div className="card-container grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1  gap-[24px] max-sm:gap-[40px]">
           {cards.map((item) => (

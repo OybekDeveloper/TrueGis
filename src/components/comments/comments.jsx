@@ -1,6 +1,7 @@
 import React from "react";
 import "./comments.scss";
 import { carditem } from "./comment-img";
+import { useTranslation } from "react-i18next";
 
 const data = [
   { id: 1 },
@@ -13,11 +14,11 @@ const data = [
 ];
 
 const Comments = () => {
+  const { t } = useTranslation()
   return (
     <div className="comment w-full mx-auto  pb-[64px]">
-      <h1 className="text-[32px] font-[600] text-center mx-auto pt-[50px]">
-        Xizmatlarimizdan mamnun mijozlar <br className="max-sm:hidden" />{" "}
-        fikrlari
+      <h1 className=" max-md:w-[70%] md:w-[50%] lg:w-[30%] text-[32px] font-[600] text-center mx-auto pt-[50px]">
+        {t("comments")}
       </h1>
       <div className="cards mt-[64px] mb-[180px]">
         <div className="card-slide">
@@ -29,16 +30,15 @@ const Comments = () => {
               <div className="card w-[300px] whitespace-normal flex flex-col p-[24px] gap-[22px]">
                 <div className="logo flex justify-start gap-[12px] items-center">
                   <img src={carditem} alt="logo" />
-                  <h1 className="text-[20px] font-[500]">Bek restorani</h1>
+                  <h1 className="text-[20px] font-[500]">{t("comment_h1")}</h1>
                 </div>
                 <p className="text-[16px] font-[400] opacity-[0.7]">
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur ma
+                  {t("comment_p")}
                 </p>
                 <div className="user flex flex-col pt-[10px]">
-                  <h1 className="text-[18px] font-[500]">Darlene Robertson</h1>
+                  <h1 className="text-[18px] font-[500]">{t("comment_user")}</h1>
                   <p className="text-[14px] font-[400] opacity-[0.7]">
-                    Menejer
+                    {t("comment_job")}
                   </p>
                 </div>
               </div>
@@ -54,16 +54,15 @@ const Comments = () => {
               <div className="card w-[300px] whitespace-normal flex flex-col p-[24px] gap-[22px]">
                 <div className="logo flex justify-start gap-[12px] items-center">
                   <img src={carditem} alt="logo" />
-                  <h1 className="text-[20px] font-[500]">Bek restorani</h1>
+                  <h1 className="text-[20px] font-[500]">{t("comment_h1")}</h1>
                 </div>
                 <p className="text-[16px] font-[400] opacity-[0.7]">
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur ma
+                  {t("comment_p")}
                 </p>
                 <div className="user flex flex-col pt-[10px]">
-                  <h1 className="text-[18px] font-[500]">Darlene Robertson</h1>
+                  <h1 className="text-[18px] font-[500]">{t("comment_user")}</h1>
                   <p className="text-[14px] font-[400] opacity-[0.7]">
-                    Menejer
+                    {t("comment_job")}
                   </p>
                 </div>
               </div>

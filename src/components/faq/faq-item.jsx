@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { plus } from "./faq-img";
 
-const FaqItem = () => {
+const FaqItem = ({ props }) => {
   const [active, setActive] = useState(false);
   const contentRef = useRef(null);
 
@@ -12,6 +12,11 @@ const FaqItem = () => {
     }
   }, [active]);
 
+  const modifiedDescription = props.discription.replace(
+    /@TrueGis_bot/g,
+    "<a href='https://t.me/TrueGis' style='color:#2970ff'>@TrueGis</a>"
+  );
+
   return (
     <div className="faqbtn">
       <div
@@ -19,7 +24,7 @@ const FaqItem = () => {
         className="flex justify-between items-center cursor-pointer"
       >
         <h1 className="text-[18px] max-sm:text-[16px] font-[500] py-[24px]">
-          TrueGis botining boshqa botlarda farqi nimada?
+          {props?.title}
         </h1>
         <img
           className={`faqbtn__img ${active && "active"} w-[32px] h-[32px]`}
@@ -29,14 +34,10 @@ const FaqItem = () => {
       </div>
       <p
         ref={contentRef}
-        className={`faqbtn__content ${
-          active ? "transition-height active" : ""
-        } text-[16px] font-[400]`}
-      >
-        Bot foydalanuvchi uchun qulaylik yaratish maqsadida ishlab chiqilgan.
-        Uning asosiy maqsadi telegramdan chiqmagan holda yaqin atrfodagi kerakli
-        manzillarni topish va ular haqida ma’lumot olishga yordam beradi.
-      </p>
+        className={`faqbtn__content ${active ? "transition-height active" : ""
+          } text-[16px] font-[400]`}
+        dangerouslySetInnerHTML={{ __html: modifiedDescription }}
+      />
       <div className="py-[12px]">
         <hr className="opacity-[0.7]" />
       </div>

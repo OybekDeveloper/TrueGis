@@ -11,8 +11,11 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Features = () => {
+  const id = localStorage.getItem('id')
+  const { t } = useTranslation()
   const [currentSection, setCurrentSection] = useState(0);
   const navigate = useNavigate();
   const imgSectionRef1 = useRef(null);
@@ -48,6 +51,8 @@ const Features = () => {
     }
   };
 
+
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -69,10 +74,8 @@ const Features = () => {
       id="bot_features"
       className="features max-w-[1440px] w-10/12 max-lg:w-11/12 mx-auto pt-[100px] flex flex-col justify-center items-center mb-[100px] max-sm:mb-0"
     >
-      <h1 className="text-[32px] font-[600] max-sm:text-[29px] sm:text-center">
-        Biznesingizni rivojlantirish uchun
-        <br className="max-sm:hidden" />
-        botimiz taklif qiladigan xizmatlar:
+      <h1 className="md:w-1/2 text-[32px] font-[600] max-sm:text-[29px] sm:text-center">
+        {t("out_offer")}
       </h1>
       <section className="pt-[100px] max-sm:pt-[64px] mb-[200px] max-sm:mb-[100px] flex flex-col  items-center justify-center">
         <div
@@ -83,16 +86,11 @@ const Features = () => {
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
             <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
               <span className="span">
-                Sizga kerak boʻladigan joy ketegoriyalarining
+                {t("offer_h1_1")}
               </span>
-              <br />
-              <span className="span1"> hammasi bir joyda</span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Tez-tez qidiriladigan joylar kategoriyalar ya’ni , sizga eng yaqin
-              va qulay masofada joylashgan kafe va restoranlar, bankomatla,
-              avtoservislar, goʻzallik salonlari , dorixonalar va barcha kerakli
-              manzillarni tezda topib beramiz
+              {t("offer_p_1")}
             </p>
           </article>
           <motion.div
@@ -126,15 +124,11 @@ const Features = () => {
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
             <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
               <span className="span1">
-                Har bir joy haqida sizga toʻliq ma’lumot beradi
+                {t("offer_h1_2")}
               </span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Sizga eng yaqin joygacha boʻlgan masofani oʻlchash, u joyning
-              ishlash vaqti va ayni vaqtda ochiq yoki yopiqligi haqida ma’lumot
-              beradi. Yana qoʻshimcha aloqa raqamini va oʻsha joygacha boʻlgan
-              yoʻl haqini hisoblab beradi
-            </p>
+              {t("offer_p_2")}</p>
           </article>
           <motion.div
             ref={imgSectionRef2}
@@ -167,15 +161,11 @@ const Features = () => {
             <img className="w-[40px] h-[40px]" src={featureicon} alt="cion" />
             <h1 className="text-[26px] max-sm:text-[23px] font-[500]">
               <span className="span">
-                Har bitta manzil haqida oʻz fikrlaringizni
+                {t("offer_h1_3")}
               </span>
-              <br />
-              <span className="span1"> yozib qoldirishingiz mumkin</span>
             </h1>
             <p className="text-[16px] font-[400] opacity-[0.8] pb-[70px]">
-              Foydalanuvchilar fikrlari manzil haqida toʻliqroq ma’lumot olishga
-              va u joyga koʻproq foydalanuvchilar tashrif buyurishiga ijobiy
-              ta’sir koʻrsatadi
+              {t("offer_p_3")}
             </p>
           </article>
           <motion.div
@@ -188,11 +178,11 @@ const Features = () => {
               scale: currentSection === 3 ? 1 : 0,
             }}
           >
-            <a href="#contact">
-              <button onClick={() => navigate('/contact')} className="flex msg-btn3 top-[518px] w-[210px] h-[30px] left-[45px] max-md:top-[432px] max-md:w-[172px] max-md:h-[25px] max-md:left-[39px]">
-                Sharh qoldirish
-              </button>
-            </a>
+
+            <button onClick={() => navigate(`/contact${id ? `/${id}` : ''}`)} className="flex msg-btn3 top-[518px] w-[210px] h-[30px] left-[45px] max-md:top-[432px] max-md:w-[172px] max-md:h-[25px] max-md:left-[39px]">
+              Sharh qoldirish
+            </button>
+
             <img
               className="w-[300px] max-md:w-[250px]"
               src={phone3}
@@ -211,35 +201,30 @@ const Features = () => {
         </div>
         <article className="flex flex-col items-start gap-[16px] max-sm:gap-[24px] w-[60%] max-sm:w-full max-sm:text-center">
           <h1 className="text-[29px] max-lg:text-[26px] max-sm:text-[23px] font-[600]">
-            Biz bilan oʻz biznesingizni yuqori <br className="max-sm:hidden" />{" "}
-            marralarga olib chiqing
+            {t("our_offer_2")}
           </h1>
           <p className="text-[16px] font-[400] opacity-[0.7]">
-            Agar sizga bizning xizmatlarimiz maqul kelgan boʻlsa darhol Xabar
-            qoldirish tugmasi orqali oʻz ma’lumotlaringizni qoldiring
+            {t("our_offer_3")}
           </p>
-          <a href="#contact" className="pt-[20px] max-sm:w-full">
-            <div className="shimmer-btn w-[144px] h-[42px] max-sm:w-full max-sm:h-[46px]">
-              <button
-                onClick={() => navigate("/contact")}
-                className="msg-btn flex max-sm:w-full"
-              >
-                Xabar qoldirish
-              </button>
-            </div>
-          </a>
+          <div className="shimmer-btn pt-[20px] w-[144px] h-[42px] max-sm:w-full max-sm:h-[46px]">
+            <button
+              onClick={() => navigate(`/contact`)}
+              className="msg-btn flex max-sm:w-full"
+            >
+              {t("msg_btn_text")}
+            </button>
+          </div>
         </article>
       </section>
       <section className="w-full flex flex-col justify-center items-center pt-[100px] max-sm:pt-0">
         <h1 className="text-[32px] max-sm:text-[29px] font-[600]">
-          Biz qanday ishlaymiz?
+          {t("how_work")}
         </h1>
         <article className=" w-[70%] max-xl:w-[80%] max-lg:w-[80%] max-sm:w-full flex flex-col  justify-center items-center gap-[5px] pt-[74px] mb-[50px]">
           <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
             <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
               <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] right-[-30px] absolute w-1/2">
-                Mijozlar bilan dastlabki uchrashuv va kelishuv shartlari haqida
-                batafsil muloqot
+                {t("how_work_1")}
               </p>
               <img className="w-[16px] h-[16px]" src={howwe} alt="" />
               <div className="howwe-line"></div>
@@ -248,8 +233,7 @@ const Features = () => {
           <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
             <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
               <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] left-[-30px] text-right absolute w-1/2">
-                Kelishuvga binoan dasturiy mahsulotni ishlab chiqish va bot
-                xizmatlariga qoʻshish
+                {t("how_work_2")}
               </p>
               <img className="w-[16px] h-[16px]" src={howwe} alt="" />
               <div className="howwe-line"></div>
@@ -258,8 +242,7 @@ const Features = () => {
           <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
             <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
               <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] right-[-30px] absolute w-1/2">
-                Kelishilgan muddat davomida dasturiy ta’minotni ommaga tadbiq
-                qilish
+                {t("how_work_3")}
               </p>
               <img className="w-[16px] h-[16px]" src={howwe} alt="" />
               <div className="howwe-line"></div>
@@ -268,8 +251,7 @@ const Features = () => {
           <div className="flex gap-[31px] justify-end max-sm:hidden w-full">
             <div className="flex flex-col justify-center items-center relative gap-[10px] w-full">
               <p className="text-[20px] max-md:text-[18px] top-[-6px] font-[500] left-[-30px] text-right absolute w-1/2">
-                Keyinchalik ham dasturiy ta’minotni qoʻllab quvvatlash va mijoz
-                bilan doimiy aloqa
+                {t("how_work_4")}
               </p>
               <img className="w-[16px] h-[16px]" src={howwe} alt="" />
             </div>
@@ -281,8 +263,7 @@ const Features = () => {
               <div className="howwe-line"></div>
             </div>
             <p className="text-[20px] max-md:text-[18px] font-[500] w-[80%]">
-              Mijozlar bilan dastlabki uchrashuv va kelishuv shartlari haqida
-              batafsil muloqot
+              {t("how_work_1")}
             </p>
           </div>
           <div className="flex sm:hidden">
@@ -291,8 +272,7 @@ const Features = () => {
               <div className="howwe-line"></div>
             </div>
             <p className="text-[20px] max-md:text-[18px] font-[500] w-[80%]">
-              Kelishuvga binoan dasturiy mahsulotni ishlab chiqish va bot
-              xizmatlariga qoʻshish
+              {t("how_work_2")}
             </p>
           </div>
           <div className="flex sm:hidden">
@@ -301,8 +281,7 @@ const Features = () => {
               <div className="howwe-line"></div>
             </div>
             <p className="text-[20px] max-md:text-[18px] font-[500] w-[80%]">
-              Kelishilgan muddat davomida dasturiy ta’minotni ommaga tadbiq
-              qilish
+              {t("how_work_3")}
             </p>
           </div>
           <div className="flex sm:hidden">
@@ -310,8 +289,7 @@ const Features = () => {
               <img className="w-[16px] h-[16px] ml-[3px]" src={howwe} alt="" />
             </div>
             <p className="text-[20px] max-md:text-[18px] font-[500] w-[80%]">
-              Keyinchalik ham dasturiy ta’minotni qoʻllab quvvatlash va mijoz
-              bilan doimiy aloqa
+              {t("how_work_4")}
             </p>
           </div>
           {/* sm dan keyingi qism */}
