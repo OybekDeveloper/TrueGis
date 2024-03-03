@@ -60,6 +60,7 @@ const Navbar = () => {
   };
   const handleActive = () => {
     setIsOpen(!isOpen);
+    setLengOpen(false);
     controls.start({
       x: isOpen ? "100%" : 0,
       transition: { duration: 0.5, staggerChildren: 0.1 },
@@ -182,12 +183,11 @@ const Navbar = () => {
         <div className="menu lg:hidden flex justify-center items-center gap-[18px]">
           <button
             onClick={() => {
-              navigate("contact")
-              scrollPage("contact");
+              navigate("/contact")
               setIsOpen(false);
               setActiveLink("");
             }}
-            className="msg-btn max-sm:h-[30px] flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
+            className="msg-btn  max-sm:h-[30px] flex max-lg:hidden max-sm:flex w-full max-sm:text-[14px]"
           >
             {t("msg_btn_text")}
           </button>
@@ -214,7 +214,7 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
         className={`lg:hidden flex navbar2  flex-col absolute px-[20px] gap-[72px] right-0 top-[80px] bg-[#0a090c] w-full max-sm:w-[70%] h-screen`}
       >
-        <ul className="text-[23px] max-sm:text-[16px] font-[600] links flex flex-col  items-end gap-[40px] max-sm:gap-[24px] pt-[52px] max-sm:pt-[44px]">
+        <ul className="text-[23px] max-sm:text-[16px] font-[600] links flex flex-col text-end items-end gap-[40px] max-sm:gap-[24px] pt-[52px] max-sm:pt-[44px]">
           <button
             onClick={() => setLengOpen(!lengOpen)}
             className="sm:hidden relative flex justify-center items-center gap-[8px] rounded-[26px] border-[1px] border-solid border-[#262626] p-[8px]"
@@ -227,8 +227,9 @@ const Navbar = () => {
             <h1>{selectedLanguage?.name}</h1>
             <img className="w-[20px] h-[20px]" src={frame} alt="" />
             <motion.div
+              initial={{ scale: 0 }}
               animate={{ scale: lengOpen ? 1 : 0 }}
-              className="top-[50px] absolute rounded-[10px] border-[1px] border-solid border-[#262626] bg-[#0A090C] px-[6px] py-[17px]"
+              className="w-[130px] top-[50px] gap-[7px] flex flex-col justify-start right-0 absolute rounded-[10px] border-[1px] border-solid border-[#262626] bg-[#0A090C]  py-[17px]"
             >
               {defaultLanguage.map((item) => (
                 <div
@@ -237,7 +238,7 @@ const Navbar = () => {
                     setLengOpen(false);
                     i18next.changeLanguage(item.code);
                   }}
-                  className="flex justify-start items-center gap-[8px] pl-[15px] pr-[24px] py-[7px] hover:rounded-[8px] hover:bg-[#184399]"
+                  className="flex justify-start items-center gap-[8px] mx-[7px] px-[7px] py-[7px] hover:rounded-[8px] hover:bg-[#184399]"
                   key={item.code}
                 >
                   <img className="w-[24px] h-[24px]" src={item.icon} alt="" />

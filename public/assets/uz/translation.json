@@ -56,5 +56,6 @@
   "send_form": "Yuborish",
   "connect_text": "Aloqa ma’lumotlari",
   "error_msg": "Bu qator to'ldirilishi shart!!!",
-  "success_msg": "Muvofaqiyatli yuborildi!"
+  "success_msg": "Muvofaqiyatli yuborildi!",
+  "qr": "QR-kodni skanerlang va botimizni sinab ko’ring"
 }

@@ -1,12 +1,24 @@
-import Gillette from './Gillette.svg';
-import LouisVuitton from './Louis Vuitton.svg';
-import MasterCard from './MasterCard.svg';
-import McDonald from "./McDonald's.svg";
-import Starbucks from './Starbucks.svg';
-import card1 from './card1.svg';
-import card2 from './card2.svg';
-import card3 from './card3.svg';
-import card4 from './card4.svg';
-import clientback from './client-back.svg'
-
-export {Gillette , LouisVuitton , MasterCard , McDonald , Starbucks , card1 , card2 , card3 , card4 , clientback}
+import card1 from "./card1.svg";
+import card2 from "./card2.svg";
+import card3 from "./card3.svg";
+import card4 from "./card4.svg";
+import clientback from "./client-back.svg";
+import costa from "./costa.png";
+import fayz from "./fayz.png";
+import irish from "./irish.png";
+import lukoil from "./lukoil.svg";
+import bek from "./bek.png";
+import med24 from "./med24.jfif";
+export {
+  card1,
+  card2,
+  card3,
+  card4,
+  clientback,
+  costa,
+  fayz,
+  irish,
+  lukoil,
+  bek,
+  med24,
+};

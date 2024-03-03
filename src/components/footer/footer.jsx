@@ -3,6 +3,7 @@ import "./footer.scss";
 import { truegis } from "../imgs";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { qr } from "./footer-img";
 const Footer = () => {
   const [activeLink, setActiveLink] = useState("");
   const navigate = useNavigate();
@@ -51,9 +52,15 @@ const Footer = () => {
     <div className="footer w-10/12 max-lg:w-11/12 mx-auto pt-[100px] mb-[48px] max-w-[1440px]">
       <footer>
         <div className="flex justify-between max-sm:flex-col items-start pb-[40px] max-sm:gap-[56px]">
-          <div className="flex justify-start items-center gap-[12px]">
-            <img className="w-[40px] h-[40px]" src={truegis} alt="logo" />
-            <h1 className="text-[29px] font-[500]">TrueGis</h1>
+          <div className="flex flex-col justify-start items-start gap-[12px]">
+            <div>
+              <img className="w-[40px] h-[40px]" src={truegis} alt="logo" />
+              <h1 className="text-[29px] font-[500]">TrueGis</h1>
+            </div>
+            <div className="flex flex-col gap-2 max-lg:w-[80%]">
+              <h1>{t("qr")}</h1>
+              <img className="w-[80px]" src={qr} alt="" />
+            </div>
           </div>
           <div className="links flex gap-[90px] max-sm:gap-0 max-sm:justify-between max-sm:w-full mr-20 max-lg:mr-0">
             <div className="flex flex-col gap-[32px]">

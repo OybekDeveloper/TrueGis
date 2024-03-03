@@ -1,15 +1,16 @@
 import React from "react";
 import {
-  MasterCard,
-  Gillette,
-  LouisVuitton,
-  McDonald,
-  Starbucks,
+  bek,
   card1,
   card2,
   card3,
   card4,
   clientback,
+  costa,
+  fayz,
+  irish,
+  lukoil,
+  med24,
 } from "./client-img";
 import "./clients.scss";
 import { useTranslation } from "react-i18next";
@@ -18,54 +19,35 @@ import { useTranslation } from "react-i18next";
 const clients = [
   {
     id: 1,
-    title: "Gillette",
-    url: Gillette,
+    title: "Lukoil",
+    url: lukoil,
   },
   {
     id: 2,
-    title: "Louis Vuitton",
-    url: LouisVuitton,
+    title: "Irish Pub Restaurant",
+    url: irish,
   },
   {
     id: 3,
-    title: "MasterCard",
-    url: MasterCard,
+    title: "Costa Coffee",
+    url: costa,
   },
   {
     id: 4,
-    title: "McDonald's",
-    url: McDonald,
+    title: "Fayz Mount Restorani",
+    url: fayz,
   },
   {
     id: 5,
-    title: "Starbucks",
-    url: Starbucks,
+    title: "Bek Restorani",
+    url: bek,
   },
   {
     id: 6,
-    title: "Gillette",
-    url: Gillette,
+    title: "",
+    url: med24,
   },
-  {
-    id: 7,
-    title: "Louis Vuitton",
-    url: LouisVuitton,
-  },
-  {
-    id: 8,
-    title: "Gillette",
-    url: Gillette,
-  },
-  {
-    id: 9,
-    title: "McDonald's",
-    url: McDonald,
-  },
-  {
-    id: 10,
-    title: "Starbucks",
-    url: Starbucks,
-  },
+
 ];
 
 const Clients = () => {
@@ -104,7 +86,7 @@ const Clients = () => {
             <div key={item.id} className="inline-flex pl-[112px]">
               <div className="flex flex-row justify-center items-center gap-[12px]">
                 <img
-                  className="w-[40px] h-[40px]"
+                  className="w-[40px] h-[40px] object-cover"
                   src={item.url}
                   alt={item.title}
                 />
@@ -118,7 +100,7 @@ const Clients = () => {
             <div key={item.id} className="inline-flex pl-[112px]">
               <div className="flex flex-row justify-center items-center gap-[12px]">
                 <img
-                  className="w-[40px] h-[40px]"
+                  className="h-[40px] object-cover"
                   src={item.url}
                   alt={item.title}
                 />
@@ -132,7 +114,7 @@ const Clients = () => {
             <div key={item.id} className="inline-flex pl-[112px]">
               <div className="flex flex-row justify-center items-center gap-[12px]">
                 <img
-                  className="w-[40px] h-[40px]"
+                  className="h-[40px] object-cover"
                   src={item.url}
                   alt={item.title}
                 />

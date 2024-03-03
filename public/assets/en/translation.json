@@ -56,5 +56,6 @@
   "send_form": "Send",
   "connect_text": "Contact Information",
   "error_msg": "This line must be filled!!!",
-  "success_msg": "Submitted successfully!"
+  "success_msg": "Submitted successfully!",
+  "qr": "Scan the QR code and try our bot"
 }

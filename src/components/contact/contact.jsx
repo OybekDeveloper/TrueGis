@@ -112,7 +112,6 @@ const Contact = () => {
         <div className="contact-you w-1/2 max-lg:w-full">
           <form className="contact-form flex flex-col items-center max-lg:items-start gap-[42px]">
             <div className="w-[70%] max-lg:w-full flex flex-col gap-2">
-              <label className="text-[red]" htmlFor="text">{errorMessage?.full_name && t("error_msg")}</label>
               <input
                 className={`${errorMessage?.full_name ? " border-red-400" : "border-[#fdfdfd4d]"} border-[1px] border-solid contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form`}
                 type="text"
@@ -121,9 +120,9 @@ const Contact = () => {
                 value={formData.full_name}
                 onChange={handleChange}
               />
+              <label className="text-[red]" htmlFor="text">{errorMessage?.full_name && t("error_msg")}</label>
             </div>
             <div className="w-[70%] max-lg:w-full flex flex-col gap-2">
-              <label className="text-[red]" htmlFor="text">{errorMessage?.phone && t("error_msg")}</label>
               <input
                 className={`${errorMessage?.phone ? "border-red-400" : "border-[#fdfdfd4d]"} border-[1px] border-solid contact-input input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form`}
                 type="text"
@@ -132,10 +131,10 @@ const Contact = () => {
                 name="phone"
                 onChange={handleInputChange} // Add onChange event
               />
+              <label className="text-[red]" htmlFor="text">{errorMessage?.phone && t("error_msg")}</label>
             </div>
             <div className="w-[70%] max-lg:w-full flex flex-col gap-2">
               <div className="">
-                <label className="text-[red]" htmlFor="message">{errorMessage?.message && t("error_msg")}</label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -145,6 +144,7 @@ const Contact = () => {
                   className={`${errorMessage?.message ? "border-red-400" : "border-[#fdfdfd4d]"} border-[1px] border-solid contact-input  input-style  p-[10px] bg-transparent text-[16px] font-[400] input-form`}
                   placeholder={t("input_2")}
                 ></textarea>
+                <label className="text-[red]" htmlFor="message">{errorMessage?.message && t("error_msg")}</label>
               </div>
             </div>
             <button
